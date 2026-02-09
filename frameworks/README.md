@@ -1,10 +1,33 @@
-# Strategic Frameworks
+# Strategic Frameworks & Enterprise Standards
 
-Evidence-based frameworks and methodologies for technology innovation, instructional design, and program development.
+Evidence-based frameworks, methodologies, and enterprise system standards for technology innovation, platform implementation, and program development.
 
-## Featured Frameworks
+---
 
-### AI Integration Strategy for Higher Education
+## Available Frameworks
+
+### 1. FTCC Canvas Course Design Framework
+**File:** [FTCC_Canvas_Course_Design_Framework.docx](FTCC_Canvas_Course_Design_Framework.docx)
+
+**Purpose:** Enterprise learning management system standards and course design framework for institutional Canvas implementation.
+
+**Application:**
+- Standardized course structure across all departments
+- Quality assurance criteria for online courses
+- Faculty course development guidelines
+- Institutional Canvas best practices
+
+**Business Value:**
+- Ensures consistency across 100+ faculty users
+- Reduces course development time through templates
+- Supports accreditation compliance
+- Provides scalable quality standards
+
+**Demonstrates:** Enterprise platform standards development, LMS governance, institutional policy creation
+
+---
+
+### 2. AI Integration Strategy for Higher Education
 Strategic planning document for implementing artificial intelligence tools in teaching, learning, and instructional design workflows.
 
 **Key Components:**
@@ -13,8 +36,10 @@ Strategic planning document for implementing artificial intelligence tools in te
 - Assessment design protocols
 - Quality assurance measures
 
-### Microcredentialing with A.I. - Two-Application Model
-Original framework developed for FTCC's microcredentialing program launch.
+---
+
+### 3. Microcredentialing with A.I. - Two-Application Model
+Original framework developed for FTCC's microcredentialing program launch (see presentations directory for full documentation).
 
 **Application 1: Develop the Pathway**
 - Identify eligible programs and skills
@@ -30,7 +55,14 @@ Original framework developed for FTCC's microcredentialing program launch.
 - Human review and adjustment
 - Feedback delivery and credential issuance via Credly
 
-### Quality Matters Course Review Methodology
+**Proven Results:**
+- Scaled FTCC program from 0 to 1,014 credentials in 4 months
+- Reduced development time by 70%
+- Presented at national Credentials As You Go conference (2023)
+
+---
+
+### 4. Quality Matters Course Review Methodology
 Process documentation for conducting internal course quality reviews aligned with QM standards.
 
 **Process Steps:**
@@ -40,8 +72,10 @@ Process documentation for conducting internal course quality reviews aligned wit
 - Review report with actionable recommendations
 - Post-review support and revision tracking
 
-### HyFlex Teaching Modality Implementation Guide
-Step-by-step guide for faculty transitioning to HyFlex (Hybrid-Flexible) teaching.
+---
+
+### 5. HyFlex Teaching Modality Implementation Guide
+Step-by-step guide for faculty transitioning to HyFlex (Hybrid-Flexible) teaching (see presentations directory for full HyFlex Digital Notebook).
 
 **Included Resources:**
 - Course design templates
@@ -51,9 +85,27 @@ Step-by-step guide for faculty transitioning to HyFlex (Hybrid-Flexible) teachin
 
 ---
 
-## Usage
+## Usage & Licensing
 
-These frameworks are licensed under CC BY-NC-SA 4.0. Educational institutions may adapt and use them with proper attribution.
+**Creative Commons BY-NC-SA 4.0**
 
-For consultation on implementing these frameworks at your institution:
-**Angela Westmoreland** - westmora@faytechcc.edu
+Educational institutions and government organizations may adapt and use these frameworks with proper attribution for non-commercial purposes.
+
+**Citation:**
+```
+[Framework Title] by Angela Westmoreland, M.Ed.
+Fayetteville Technical Community College
+Available at: https://github.com/AMLW05/thought-leadership
+Licensed under CC BY-NC-SA 4.0
+```
+
+---
+
+## Consultation
+
+For assistance implementing these frameworks or developing custom enterprise standards for your organization:
+
+**Angela Westmoreland, M.Ed.**
+- Email: westmora@faytechcc.edu | awestmoreland05@gmail.com
+- LinkedIn: [linkedin.com/in/angela-westmoreland-m-ed](https://www.linkedin.com/in/angela-westmoreland-m-ed-93676b313/)
+- Portfolio: [amlw05.github.io/innovation-portfolio](https://amlw05.github.io/innovation-portfolio/)
