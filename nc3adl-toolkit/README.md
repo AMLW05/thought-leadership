@@ -46,31 +46,34 @@ The North Carolina Community College Association of Distance Learning (NC3ADL) i
 
 ### 2. NC3ADL Conference Journal (2025)
 **File:** [NC3ADL_Conference_Journal_2025.docx](NC3ADL_Conference_Journal_2025.docx)
+**Interactive Padlet:** [NC3ADL Interactive Agenda Board](https://awestmoreland.padlet.org/awestmoreland05/nc3adl-interactive-agenda-board-u309kwd0v2iha3jx)
 
-**Created by Angela Westmoreland** as professional development resource for NC3ADL annual conference attendees
+**Created and Designed by Angela Westmoreland** as comprehensive professional development system for NC3ADL annual conference attendees
 
-**Purpose:** Custom-designed conference resource guide and knowledge transfer tool created specifically for the 2025 NC3ADL annual conference.
+**Purpose:** Custom-designed multi-format conference resource combining print documentation with interactive digital collaboration tools.
 
-**Contents Created:**
-- Conference session summaries and key takeaways
+**Created Components:**
+- Conference Journal document with session summaries and key takeaways
+- Interactive Padlet agenda board for real-time collaboration
 - Innovation case studies from peer institutions
 - Emerging technology trends in distance learning
 - Implementation strategies from successful programs
-- Interactive padlets for collaborative note-taking and resource sharing
 - Curated reference links and follow-up resources
 
 **Creation Process:**
-As Vice President, designed and developed this resource to:
+As Vice President, designed and developed this integrated system to:
 - Enhance conference experience through structured knowledge capture
+- Enable real-time collaborative note-taking via Padlet platform
 - Create sustainable reference document for attendees post-conference
-- Facilitate cross-institutional knowledge sharing
+- Facilitate cross-institutional knowledge sharing during and after event
 - Provide actionable implementation guidance
 
 **Demonstrates:**
 - Event resource development and design thinking
-- Knowledge transfer tool creation
+- Interactive digital tool creation (Padlet platform design)
+- Knowledge transfer system architecture
 - Professional development facilitation
-- Multi-format resource integration (document + digital padlets)
+- Multi-format resource integration (document + interactive web tools)
 
 ---
 
