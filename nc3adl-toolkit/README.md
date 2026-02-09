@@ -19,45 +19,58 @@ The North Carolina Community College Association of Distance Learning (NC3ADL) i
 ### 1. NC3ADL Digital Tools Index (2025)
 **File:** [NC3ADL_Digital_Tools_Index_2025.pdf](NC3ADL_Digital_Tools_Index_2025.pdf)
 
-**Purpose:** Comprehensive technology evaluation catalog for distance learning tools across all 58 NC community colleges.
+**Created and Maintained by Angela Westmoreland since 2017** - 8+ years of continuous updates
+
+**Purpose:** Comprehensive technology resource catalog serving all 58 NC community colleges as centralized reference for distance learning tools, platforms, and emerging technologies.
 
 **Contents:**
-- Technology platform evaluations and comparisons
-- Implementation best practices from multiple institutions
-- Cost analysis and ROI data
-- Vendor contact information and procurement guidance
+- Curated technology platform directory with descriptions
+- Implementation guidance and best practices
+- Vendor contact information and procurement resources
 - Use case examples from colleges statewide
+- Continuous updates with new tools and technologies
 
 **Strategic Value:**
-- Centralized technology assessment across large multi-institution system
-- Evidence-based platform selection guidance
-- Shared procurement leverage for 58 colleges
-- Continuous monitoring of emerging technologies
+- **8+ years as institutional knowledge curator** for entire statewide system
+- Created single source of truth for technology resources across 58 institutions
+- Sustained resource curation demonstrating long-term strategic thinking
+- Shared knowledge base reducing duplicate research across colleges
 
-**Demonstrates:** Large-scale technology evaluation, multi-stakeholder coordination, strategic technology planning for enterprise systems
+**Demonstrates:**
+- Resource curation and knowledge management at scale
+- Sustained leadership and institutional memory (2017-present)
+- Multi-stakeholder service across large distributed organization
+- Strategic information architecture for enterprise systems
 
 ---
 
 ### 2. NC3ADL Conference Journal (2025)
 **File:** [NC3ADL_Conference_Journal_2025.docx](NC3ADL_Conference_Journal_2025.docx)
 
-**Purpose:** Professional development and innovation trend documentation from NC3ADL annual conference.
+**Created by Angela Westmoreland** as professional development resource for NC3ADL annual conference attendees
 
-**Contents:**
+**Purpose:** Custom-designed conference resource guide and knowledge transfer tool created specifically for the 2025 NC3ADL annual conference.
+
+**Contents Created:**
 - Conference session summaries and key takeaways
 - Innovation case studies from peer institutions
 - Emerging technology trends in distance learning
 - Implementation strategies from successful programs
-- Professional networking and collaboration opportunities
+- Interactive padlets for collaborative note-taking and resource sharing
+- Curated reference links and follow-up resources
 
-**Leadership Role:**
-As Vice President, responsible for:
-- Conference planning and coordination
-- Session selection and speaker recruitment
-- Statewide professional development strategy
-- Knowledge sharing across 58 institutions
+**Creation Process:**
+As Vice President, designed and developed this resource to:
+- Enhance conference experience through structured knowledge capture
+- Create sustainable reference document for attendees post-conference
+- Facilitate cross-institutional knowledge sharing
+- Provide actionable implementation guidance
 
-**Demonstrates:** Professional leadership, innovation trend monitoring, multi-institution collaboration, strategic planning
+**Demonstrates:**
+- Event resource development and design thinking
+- Knowledge transfer tool creation
+- Professional development facilitation
+- Multi-format resource integration (document + digital padlets)
 
 ---
 
