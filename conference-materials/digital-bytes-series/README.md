@@ -1,18 +1,48 @@
-# Digital Bytes Training Series
+# Enterprise Technology Training Experience
 
-Monthly professional development workshop series for enterprise technology platform adoption and end-user training.
+Comprehensive end-user training programs for enterprise technology platform adoption and organizational change management across multiple institutions and platforms.
 
 ---
 
-## Overview
+## Training Experience Overview
 
-Digital Bytes is a monthly training series created and delivered by Angela Westmoreland at Fayetteville Technical Community College (2022-2025). The series provides faculty and staff with practical, hands-on training for enterprise technology platforms including Canvas LMS, artificial intelligence tools, Quality Matters standards, and emerging educational technologies.
+**10+ years delivering enterprise technology training** across K-12 public schools, community colleges, and multi-institutional systems including:
+
+### Digital Bytes Training Series (FTCC, 2022-2025)
+Monthly professional development workshop series at Fayetteville Technical Community College.
 
 **Program Scope:**
 - 100+ workshops delivered over 3 years
 - 200+ faculty and staff trained
 - Monthly recurring series format
 - Multi-tiered training approach (quick-start guides, step-by-step tutorials, deep-dive workshops)
+
+### Cumberland County Schools (CCS) Training Programs (Previous Role)
+Enterprise platform trainer for K-12 public school system.
+
+**Platforms Trained:**
+- **Canvas LMS** - Learning management system training for teachers and administrators
+- **WebEx** - Synchronous meeting platform training for virtual instruction and administrative meetings
+- Concurrent training programs for both platforms during distance learning transition
+
+**Organizational Context:**
+- K-12 public school system serving multiple schools and departments
+- End-user base: Teachers, administrators, support staff
+- Change management for rapid platform adoption during distance learning implementation
+
+### Multi-Platform Learning Management System Expertise
+
+**Course Building & Platform Administration Experience:**
+- **Blackboard Learn** - Traditional Blackboard course development and administration
+- **Blackboard Ultra** - Next-generation Blackboard interface migration training
+- **Google Classroom** - K-12 classroom management platform implementation
+- **Canvas LMS** - Institutional implementation and ongoing training (K-12 and higher education)
+
+**Demonstrates:**
+- Platform-agnostic training capability
+- Experience with platform migrations and transitions
+- Multi-organizational training delivery (K-12 schools + community colleges + statewide system)
+- Synchronous and asynchronous platform expertise
 
 ---
 
