@@ -14,24 +14,24 @@
             line-height: 1.7;
         }
 
-        /* HEADER */
+        /* ── HEADER ── */
         .site-header {
             background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
             color: white;
             padding: 40px;
             text-align: center;
         }
-        .site-header h1 { font-size: 2.2em; margin-bottom: 8px; }
+        .site-header h1 { font-size: 2em; margin-bottom: 8px; }
         .site-header .subtitle { font-size: 1.05em; opacity: 0.85; margin-bottom: 6px; }
-        .site-header .meta { font-size: 0.9em; opacity: 0.65; }
+        .site-header .meta { font-size: 0.88em; opacity: 0.6; }
 
-        /* TAB NAV */
+        /* ── TAB NAV ── */
         .tab-nav {
             background: #16213e;
-            padding: 0 40px;
+            padding: 0 24px;
             display: flex;
             flex-wrap: wrap;
-            gap: 4px;
+            gap: 2px;
             border-bottom: 3px solid #667eea;
             position: sticky;
             top: 0;
@@ -41,7 +41,7 @@
             background: none;
             border: none;
             color: #a0aec0;
-            padding: 14px 18px;
+            padding: 13px 16px;
             cursor: pointer;
             font-size: 13px;
             font-weight: 500;
@@ -53,852 +53,1107 @@
         .tab-btn:hover { color: white; }
         .tab-btn.active { color: #818cf8; border-bottom-color: #818cf8; }
 
-        /* CONTENT */
-        .content { max-width: 1100px; margin: 0 auto; padding: 40px 24px; }
-
+        /* ── CONTENT ── */
+        .content { max-width: 1200px; margin: 0 auto; padding: 36px 24px 60px; }
         .tab-section { display: none; }
         .tab-section.active { display: block; }
 
-        /* SECTION INTRO */
+        /* ── SECTION INTRO ── */
         .section-intro {
             background: white;
             border-radius: 12px;
-            padding: 28px 32px;
+            padding: 26px 30px;
             margin-bottom: 28px;
             border-left: 5px solid #667eea;
             box-shadow: 0 2px 8px rgba(0,0,0,0.06);
         }
-        .section-intro h2 { font-size: 1.6em; color: #1a1a2e; margin-bottom: 8px; }
-        .section-intro p { color: #5a6c7d; }
+        .section-intro h2 { font-size: 1.5em; color: #1a1a2e; margin-bottom: 8px; }
+        .section-intro p { color: #4a5568; }
+        .section-intro a { color: #667eea; }
 
-        /* CARDS */
-        .card {
-            background: white;
-            border-radius: 12px;
-            padding: 24px 28px;
-            margin-bottom: 16px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-            border: 1px solid #e8edf2;
-        }
-        .card h3 {
+        .subsection-head {
+            font-size: 1.2em;
             color: #1a1a2e;
-            font-size: 1.15em;
-            margin-bottom: 8px;
+            margin: 32px 0 14px;
+            padding-bottom: 6px;
+            border-bottom: 2px solid #667eea;
         }
-        .card p { color: #5a6c7d; margin-bottom: 8px; }
-        .card p:last-child { margin-bottom: 0; }
 
-        .badge {
-            display: inline-block;
-            background: #eef2ff;
-            color: #4f46e5;
-            font-size: 11px;
-            font-weight: 600;
-            padding: 3px 10px;
-            border-radius: 20px;
-            margin-right: 6px;
-            margin-bottom: 6px;
-        }
-        .badge.green { background: #ecfdf5; color: #059669; }
-        .badge.amber { background: #fffbeb; color: #d97706; }
-
-        /* COMPARISON TABLE */
+        /* ── COMPARISON TABLE ── */
         .table-wrap { overflow-x: auto; margin-bottom: 24px; }
-        table {
+        .comparison-table, .qz-table {
             width: 100%;
             border-collapse: collapse;
             background: white;
-            border-radius: 12px;
+            border-radius: 10px;
             overflow: hidden;
             box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-            font-size: 14px;
+            font-size: 0.9em;
         }
-        thead tr { background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); color: white; }
-        th { padding: 14px 16px; text-align: left; font-weight: 600; }
-        td { padding: 13px 16px; border-bottom: 1px solid #f0f4f8; vertical-align: top; }
-        tr:last-child td { border-bottom: none; }
-        tr:nth-child(even) td { background: #fafbfc; }
-        tr:hover td { background: #f0f4ff; }
+        .comparison-table th, .qz-table th {
+            background: #1a1a2e;
+            color: white;
+            padding: 12px 14px;
+            text-align: left;
+            font-weight: 600;
+        }
+        .comparison-table td, .qz-table td {
+            padding: 11px 14px;
+            border-bottom: 1px solid #e2e8f0;
+            vertical-align: top;
+        }
+        .comparison-table tr:last-child td, .qz-table tr:last-child td { border-bottom: none; }
+        .comparison-table tr:nth-child(even) td { background: #f8fafc; }
+        .qz-table tr:nth-child(even) td { background: #f8fafc; }
+        .comparison-table a, .qz-table a { color: #667eea; font-weight: 600; }
 
-        /* PROMPT GRID */
-        .prompt-categories { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 20px; margin-bottom: 28px; }
-        .prompt-category {
+        /* ── TOOL GRID ── */
+        .tool-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+            gap: 16px;
+        }
+        .tool-card {
             background: white;
             border-radius: 10px;
-            padding: 20px;
             box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-            border-top: 4px solid #667eea;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
         }
-        .prompt-category h4 { color: #1a1a2e; font-size: 1em; margin-bottom: 12px; }
-        .prompt-category ul { list-style: none; }
-        .prompt-category ul li {
-            color: #5a6c7d;
-            font-size: 13px;
-            padding: 4px 0;
-            border-bottom: 1px solid #f0f4f8;
+        .tool-link {
+            background: #1a1a2e;
+            padding: 12px 16px;
+            font-size: 0.85em;
+            word-break: break-all;
         }
-        .prompt-category ul li:last-child { border-bottom: none; }
+        .tool-link a {
+            color: #818cf8;
+            font-weight: 600;
+            text-decoration: none;
+        }
+        .tool-link a:hover { color: #a5b4fc; text-decoration: underline; }
+        .tool-desc {
+            padding: 14px 16px;
+            font-size: 0.88em;
+            color: #4a5568;
+            flex: 1;
+        }
+        .tool-desc a { color: #667eea; }
+        .tool-extra {
+            margin-top: 8px;
+            font-size: 0.85em;
+            color: #718096;
+            border-top: 1px solid #e2e8f0;
+            padding-top: 8px;
+        }
 
-        /* TOOL GRID */
-        .tool-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 20px; }
-
-        /* GAMIFICATION GRID */
-        .game-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 16px; }
-        .game-card {
+        /* ── PROMPT GRID ── */
+        .prompt-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        .prompt-row {
             background: white;
             border-radius: 10px;
-            padding: 20px;
             box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-            border-top: 4px solid #10b981;
+            display: grid;
+            grid-template-columns: 200px 1fr;
+            overflow: hidden;
         }
-        .game-card h3 { color: #1a1a2e; margin-bottom: 8px; }
-        .game-card p { color: #5a6c7d; font-size: 14px; }
+        .prompt-cat {
+            background: #1a1a2e;
+            color: #818cf8;
+            padding: 14px 16px;
+            font-weight: 700;
+            font-size: 0.9em;
+            display: flex;
+            align-items: center;
+        }
+        .prompt-cat a {
+            color: #818cf8;
+            text-decoration: none;
+        }
+        .prompt-cat a:hover { color: #a5b4fc; text-decoration: underline; }
+        .prompt-links {
+            padding: 12px 16px;
+            font-size: 0.88em;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            align-items: center;
+        }
+        .prompt-links a {
+            background: #eef2ff;
+            color: #4338ca;
+            padding: 4px 10px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-size: 0.85em;
+            transition: background 0.2s;
+        }
+        .prompt-links a:hover { background: #c7d2fe; }
 
-        /* FOOTER */
+        /* ── FOOTER ── */
         .site-footer {
             background: #1a1a2e;
             color: #a0aec0;
             text-align: center;
-            padding: 28px 40px;
-            font-size: 13px;
-            line-height: 1.8;
+            padding: 28px;
+            font-size: 0.85em;
             margin-top: 40px;
         }
-        .site-footer strong { color: #e2e8f0; }
-        .site-footer a { color: #667eea; text-decoration: none; }
+        .site-footer a { color: #818cf8; }
 
+        /* ── RESPONSIVE ── */
         @media (max-width: 640px) {
-            .site-header h1 { font-size: 1.5em; }
-            .tab-nav { padding: 0 12px; }
-            .tab-btn { padding: 12px 10px; font-size: 12px; }
-            .content { padding: 24px 16px; }
-            .prompt-categories { grid-template-columns: 1fr; }
             .tool-grid { grid-template-columns: 1fr; }
+            .prompt-row { grid-template-columns: 1fr; }
+            .prompt-cat { padding: 10px 14px; }
+            .site-header h1 { font-size: 1.5em; }
         }
     </style>
 </head>
 <body>
 
-<div class="site-header">
-    <h1>NC3ADL Digital Tools Index</h1>
-    <p class="subtitle">Curated by Angela Westmoreland &mdash; NC3ADL Vice President, All 58 NC Community Colleges</p>
-    <p class="meta">2025 Edition &nbsp;&middot;&nbsp; Maintained since 2017 &nbsp;&middot;&nbsp; <a href="https://www.nc3adl.org/" target="_blank" style="color:#818cf8;">NC3ADL Official Site</a></p>
+    <header class="site-header">
+        <h1>NC3ADL Digital Tools Index</h1>
+        <p class="subtitle">Curated by Angela Westmoreland &mdash; VP, NC3ADL</p>
+        <p class="meta">2025 Edition &nbsp;&middot;&nbsp; Maintained since 2017 &nbsp;&middot;&nbsp; <a href="https://www.nc3adl.org/" target="_blank" rel="noopener" style="color:#818cf8;">NC3ADL Official Site</a></p>
+    </header>
+
+    <nav class="tab-nav" role="navigation" aria-label="Tool categories">
+            <button class="tab-btn active" data-tab="ai-platforms">AI Platforms</button>
+            <button class="tab-btn" data-tab="ai-prompts">AI Prompt Index</button>
+            <button class="tab-btn" data-tab="ai-tools">AI Tools</button>
+            <button class="tab-btn" data-tab="fun-tools">Fun Digital Tools</button>
+            <button class="tab-btn" data-tab="gamification">Gamification</button>
+            <button class="tab-btn" data-tab="chrome">Chrome Extensions</button>
+            <button class="tab-btn" data-tab="google-tools">Google's Extra Tools</button>
+            <button class="tab-btn" data-tab="learning">Learning Activities</button>
+            <button class="tab-btn" data-tab="quizizz">Quizizz Click&amp;Go PD</button>
+    </nav>
+
+    <main class="content">
+        <div class="tab-section active" id="tab-ai-platforms">
+            <div class="section-intro">
+                <h2>AI Platforms Comparison Table</h2>
+                <p>A brief side-by-side of the best known AI Tools today.</p>
+            </div>
+            <div class="table-wrap"><table class="comparison-table">
+<tr>
+<th>AI Tool</th>
+<th>Description</th>
+<th>Best Use Cases</th>
+<th>Free Version</th>
+<th>Premium Version</th>
+</tr>
+<tr>
+<td><a href="https://chatgpt.com/" target="_blank" rel="noopener">ChatGPT</a></td>
+<td>An advanced AI chatbot by OpenAI designed for conversations, content creation, coding, and research.</td>
+<td>General conversations, content creation, and AI-assisted coding.</td>
+<td>Access to ChatGPT-3.5 with text-based interactions.</td>
+<td>ChatGPT Plus ($20/month) with GPT-4 Turbo, priority access, and faster responses.</td>
+</tr>
+<tr>
+<td><a href="https://claude.ai/login" target="_blank" rel="noopener">Claude AI</a></td>
+<td>An AI assistant by Anthropic with a focus on safety, nuanced reasoning, and longer memory capabilities.</td>
+<td>Deep analytical reasoning, ethical AI use, and longer contextual understanding.</td>
+<td>Limited free usage with access to standard models.</td>
+<td>Claude Pro ($20/month) with access to Claude's most advanced models.</td>
+</tr>
+<tr>
+<td><a href="https://www.google.com/aclk?sa=l&ai=DChcSEwiqzb_ewYGMAxW_rFoFHZKVB5kYABAAGgJ2dQ&co=1&ase=2&gclid=CjwKCAjwvr--BhB5EiwAd5YbXhH_97M728DW5Rb4EOPlk1ITrXzvvrzljqJ_tGO9WHKOv83X77KVkRoCeXUQAvD_BwE&sig=AOD64_2stueYknkq8QBoXOQrWF71QeRhLQ&q&nis=4&adurl&ved=2ahUKEwjBjbfewYGMAxUlQjABHaDrDBoQ0Qx6BAgJEAE" target="_blank" rel="noopener">Google Gemini</a></td>
+<td>Google's AI platform designed for search, image generation, and integrated assistance across Google products.</td>
+<td>Google Search enhancements, multimedia generation, and educational applications.</td>
+<td>Basic AI assistance through Google Search and Gemini chat.</td>
+<td>Google Gemini Advanced with enhanced AI capabilities and deeper integrations.</td>
+</tr>
+<tr>
+<td><a href="https://copilot.microsoft.com/" target="_blank" rel="noopener">Microsoft Copilot</a></td>
+<td>Microsoft's AI integrated into Office 365 and Windows, designed for productivity and automation.</td>
+<td>Business productivity, document generation, and AI-driven automation.</td>
+<td>Copilot offers basic AI-powered suggestions in Microsoft products.</td>
+<td>Microsoft Copilot Pro ($30/month) with business-grade AI support.</td>
+</tr>
+<tr>
+<td><a href="https://www.perplexity.ai/" target="_blank" rel="noopener">Perplexity</a></td>
+<td>An AI-powered search and research assistant that combines web browsing with natural language understanding.</td>
+<td>Real-time research, web browsing, and AI-powered knowledge discovery.</td>
+<td>Basic search and AI-powered responses available for free.</td>
+<td>Perplexity Pro ($20/month) with faster AI responses and enhanced research capabilities.</td>
+</tr>
+</table></div>
+        </div>
+
+        <div class="tab-section" id="tab-ai-prompts">
+            <div class="section-intro">
+                <h2>Artificial Intelligence Prompt Library Index</h2>
+                <p><a href="https://www.aiforeducation.io/prompt-library" target="_blank" rel="noopener">Access full site</a></p>
+            </div>
+            <div class="prompt-grid">
+<div class="prompt-row"><div class="prompt-cat"><a href="https://www.aiforeducation.io/prompt-library-administrative" target="_blank" rel="noopener">Administrative</a></div><div class="prompt-links"><a href="https://www.aiforeducation.io/prompts/developing-workflows" target="_blank" rel="noopener">Developing Workflows</a><br><a href="https://www.aiforeducation.io/prompts/faculty-meetings" target="_blank" rel="noopener">Faculty Meeting Agenda Creator</a><br><a href="https://www.aiforeducation.io/prompts/reference-letters" target="_blank" rel="noopener">Reference Letters Writer</a><br><a href="https://www.aiforeducation.io/prompts/smart-goal-generation" target="_blank" rel="noopener">SMART Goal Generator</a><br><a href="https://www.aiforeducation.io/prompts/summarize-meeting-notes" target="_blank" rel="noopener">Summarize Meeting Notes</a><br><a href="https://www.aiforeducation.io/prompts/team-building" target="_blank" rel="noopener">Team Building Activities Creator</a></div></div>
+<div class="prompt-row"><div class="prompt-cat"><a href="https://www.aiforeducation.io/prompt-library-assessment" target="_blank" rel="noopener">Assessment</a></div><div class="prompt-links"><a href="https://www.aiforeducation.io/prompts/ai-assisted-assessments" target="_blank" rel="noopener">AI-Assisted Assignments (Students Using AI)</a><br><a href="https://www.aiforeducation.io/prompts/design-an-ai-resistant-assessment" target="_blank" rel="noopener">AI-Resistant Assignment Developer</a><br><a href="https://www.aiforeducation.io/prompts/identify-undesirable-difficulties" target="_blank" rel="noopener">Assessment Obstacles Evaluator</a><br><a href="https://www.aiforeducation.io/prompts/authentic-assessments" target="_blank" rel="noopener">Authentic Assessment Creator</a><br><a href="https://www.aiforeducation.io/prompts/blooms-taxonomy" target="_blank" rel="noopener">Bloom's Taxonomy Integrator</a><br><a href="https://www.aiforeducation.io/prompts/convert-an-essay-into-a-discussion" target="_blank" rel="noopener">Essay to Discussion Converter</a><br><a href="https://www.aiforeducation.io/prompts/student-exemplars" target="_blank" rel="noopener">Exemplar Creator</a><br><a href="https://www.aiforeducation.io/prompts/exit-tickets" target="_blank" rel="noopener">Exit Tickets Creator</a><br><a href="https://www.aiforeducation.io/prompts/formative-assessments" target="_blank" rel="noopener">Formative Assessments Aligner &amp; Creator</a><br><a href="https://www.aiforeducation.io/prompts/convert-a-multiple-choice-test-into-a-project" target="_blank" rel="noopener">Multiple-Choice to Project Converter</a><br><a href="https://www.aiforeducation.io/prompts/quizzes" target="_blank" rel="noopener">Quiz Creator (with &amp; without content)</a><br><a href="https://www.aiforeducation.io/prompts/rubrics" target="_blank" rel="noopener">Rubric Creator</a><br><a href="https://www.aiforeducation.io/prompts/summative-performance-tasks" target="_blank" rel="noopener">Summative Tasks Generator</a></div></div>
+<div class="prompt-row"><div class="prompt-cat"><a href="https://www.aiforeducation.io/prompt-library-communication" target="_blank" rel="noopener">Communication</a></div><div class="prompt-links"><a href="https://www.aiforeducation.io/prompts/educational-philosophy-statement" target="_blank" rel="noopener">Educational Philosopher Developer</a><br><a href="https://www.aiforeducation.io/prompts/email-responses" target="_blank" rel="noopener">Email Responses Generator</a><br><a href="https://www.aiforeducation.io/prompts/slides" target="_blank" rel="noopener">SlideDeck Creator (Slides or PPT)</a></div></div>
+<div class="prompt-row"><div class="prompt-cat">Instructional Suggestions</div><div class="prompt-links"><a href="https://www.aiforeducation.io/prompts/critically-analyze-ai-outputs-using-an-ai-chatbot" target="_blank" rel="noopener">Analyzing for Authenticity</a><br><a href="https://www.aiforeducation.io/prompts/celebrity-heads-game" target="_blank" rel="noopener">Class vs. the Chatbot Games Creator</a><br><a href="https://www.aiforeducation.io/prompts/direct-instruction" target="_blank" rel="noopener">Direct Instruction Planner</a><br><a href="https://www.aiforeducation.io/prompts/explain-it-to-me-like" target="_blank" rel="noopener">"Explain it to me like" Differentiator</a><br><a href="https://www.aiforeducation.io/prompts/emoji-translator" target="_blank" rel="noopener">Text to Emojis Translator</a><br><a href="https://www.aiforeducation.io/prompts/time-travel" target="_blank" rel="noopener">Time Travel Guide Creator</a></div></div>
+<div class="prompt-row"><div class="prompt-cat"><a href="https://www.aiforeducation.io/prompt-library-lesson-planning" target="_blank" rel="noopener">Lesson Planning</a></div><div class="prompt-links"><a href="https://www.aiforeducation.io/prompts/alternative-teaching-methods" target="_blank" rel="noopener">Alternative Teaching Methods Generator</a><br><a href="https://www.aiforeducation.io/prompts/apples-to-apples" target="_blank" rel="noopener">Apples to Apples Game Creator</a><br><a href="https://www.aiforeducation.io/prompts/anticipate-common-misconceptions" target="_blank" rel="noopener">Common Misconceptions Analyzer</a><br><a href="https://www.aiforeducation.io/prompts/improve-content" target="_blank" rel="noopener">Content Improvement Analyzer</a><br><a href="https://www.aiforeducation.io/prompts/creative-writing-assignments" target="_blank" rel="noopener">Creative Writing Assignments Generator</a><br><a href="https://www.aiforeducation.io/prompts/critical-thinking-questions" target="_blank" rel="noopener">Critical Thinking Questions Creator</a><br><a href="https://www.aiforeducation.io/prompts/debate-topics" target="_blank" rel="noopener">Debate Topic Creator</a><br><a href="https://www.aiforeducation.io/prompts/discussion-topics" target="_blank" rel="noopener">Discussion Topics Generator</a><br><a href="https://www.aiforeducation.io/prompts/essay-topics" target="_blank" rel="noopener">Essay Topics Generator</a><br><a href="https://www.aiforeducation.io/prompts/essential-questions" target="_blank" rel="noopener">Essential Questions Developer</a><br><a href="https://www.aiforeducation.io/prompts/lesson-plan-gamification" target="_blank" rel="noopener">Gamification Converter</a><br><a href="https://www.aiforeducation.io/prompts/break-down-goals-into-objectives" target="_blank" rel="noopener">Goals to Objectives Breakdown Tool</a><br><a href="https://www.aiforeducation.io/prompts/graphic-organizers" target="_blank" rel="noopener">Graphic Organizer Creator</a><br><a href="https://www.aiforeducation.io/prompts/classroom-jeopardy" target="_blank" rel="noopener">Jeopardy Game Creator</a><br><a href="https://www.aiforeducation.io/prompts/lesson-closures" target="_blank" rel="noopener">Lesson Closure Ideas Generator</a><br><a href="https://www.aiforeducation.io/prompts/lesson-hooks" target="_blank" rel="noopener">Lesson Hook Generator</a><br><a href="https://www.aiforeducation.io/prompts/lesson-idea-generator" target="_blank" rel="noopener">Lesson Idea Generator</a><br><a href="https://www.aiforeducation.io/prompts/lesson-plans" target="_blank" rel="noopener">Lesson Plan Generator</a><br><a href="https://www.aiforeducation.io/prompts/leveled-study-guides" target="_blank" rel="noopener">Leveled Study Guide Creator</a><br><a href="https://www.aiforeducation.io/prompts/math-games" target="_blank" rel="noopener">Math Games Creator</a><br><a href="https://www.aiforeducation.io/prompts/online-tutoring-plan" target="_blank" rel="noopener">Online Tutoring Plan Creator</a><br><a href="https://www.aiforeducation.io/prompts/personalize-quizzes" target="_blank" rel="noopener">Personalized Quiz Creator</a><br><a href="https://www.aiforeducation.io/prompts/poems" target="_blank" rel="noopener">Poetry Creator</a><br><a href="https://www.aiforeducation.io/prompts/pbl-lesson-plan" target="_blank" rel="noopener">Problem-Based Learning (PBL) Creator</a><br><a href="https://www.aiforeducation.io/prompts/real-world-examples" target="_blank" rel="noopener">Real-World Examples Creator</a><br><a href="https://www.aiforeducation.io/prompts/science-demos" target="_blank" rel="noopener">Science Demonstrations Creator</a><br><a href="https://www.aiforeducation.io/prompts/standard-alignment-for-a-text" target="_blank" rel="noopener">Standards to Text Aligner</a><br><a href="https://www.aiforeducation.io/prompts/strengths-based-lesson-plan" target="_blank" rel="noopener">Strengths-Based Lesson Builder</a><br><a href="https://www.aiforeducation.io/prompts/syllabus" target="_blank" rel="noopener">Syllabus Generator</a><br><a href="https://www.aiforeducation.io/prompts/design-tiered-assignments" target="_blank" rel="noopener">Tiered Assignment Generator</a><br><a href="https://www.aiforeducation.io/prompts/learning-objectives" target="_blank" rel="noopener">Unit or Learning Objectives Creator</a><br><a href="https://www.aiforeducation.io/prompts/modify-usability-of-an-existing-text" target="_blank" rel="noopener">Usability Modifier</a><br><a href="https://www.aiforeducation.io/prompts/virtual-science-tutor" target="_blank" rel="noopener">Virtual Science Tutor</a><br><a href="https://www.aiforeducation.io/prompts/vocabulary-lists" target="_blank" rel="noopener">Vocabulary List Generator</a><br><a href="https://www.aiforeducation.io/prompts/worksheet-creator" target="_blank" rel="noopener">Worksheet Creator</a></div></div>
+<div class="prompt-row"><div class="prompt-cat"><a href="https://www.aiforeducation.io/prompt-library-professional-development" target="_blank" rel="noopener">Professional Development</a></div><div class="prompt-links"><a href="https://www.aiforeducation.io/prompts/pd-idea-generator" target="_blank" rel="noopener">Idea Generator</a><br><a href="https://www.aiforeducation.io/prompts/team-building" target="_blank" rel="noopener">Team Building Activities Developer</a><br><a href="https://www.aiforeducation.io/prompts/pd-workshop-planner" target="_blank" rel="noopener">Workshop Planner</a></div></div>
+<div class="prompt-row"><div class="prompt-cat"><a href="https://www.aiforeducation.io/prompt-library-social-emotional-learning" target="_blank" rel="noopener">Social/Emotional Learning (SEL)</a></div><div class="prompt-links"></div></div>
+<div class="prompt-row"><div class="prompt-cat"><a href="https://www.aiforeducation.io/prompt-library-special-needs" target="_blank" rel="noopener">Special/Exceptional Education</a></div><div class="prompt-links"></div></div>
+<div class="prompt-row"><div class="prompt-cat"><a href="https://www.aiforeducation.io/prompt-library-for-students" target="_blank" rel="noopener">Student Resources</a></div><div class="prompt-links"><a href="https://www.aiforeducation.io/curriculum-main" target="_blank" rel="noopener">AI Intro for Students Lessons</a><br><a href="https://www.aiforeducation.io/prompts/flashcards" target="_blank" rel="noopener">Flashcard Creator</a><br><a href="https://www.aiforeducation.io/prompts/help-me-understand" target="_blank" rel="noopener">"Help me understand" Explainer</a><br><a href="https://www.aiforeducation.io/prompts/research-project-ideas" target="_blank" rel="noopener">Research Project Ideas Generator</a><br><a href="https://www.aiforeducation.io/prompts/studying-help" target="_blank" rel="noopener">Study Notes Creator</a><br><a href="https://www.aiforeducation.io/prompts/summarize-text" target="_blank" rel="noopener">Text Summarizer</a></div></div>
+<div class="prompt-row"><div class="prompt-cat"><a href="https://www.aiforeducation.io/prompt-library-all-prompts" target="_blank" rel="noopener">All Prompts</a></div><div class="prompt-links"></div></div>
 </div>
-
-<nav class="tab-nav">
-    <button class="tab-btn active" onclick="showTab('ai-platforms')">AI Platforms</button>
-    <button class="tab-btn" onclick="showTab('ai-prompt-index')">AI Prompt Index</button>
-    <button class="tab-btn" onclick="showTab('ai-tools')">AI Tools</button>
-    <button class="tab-btn" onclick="showTab('fun-tools')">Fun Digital Tools</button>
-    <button class="tab-btn" onclick="showTab('gamification')">Gamification</button>
-    <button class="tab-btn" onclick="showTab('chrome-extensions')">Chrome Extensions</button>
-    <button class="tab-btn" onclick="showTab('google-extras')">Google&rsquo;s Extra Tools</button>
-    <button class="tab-btn" onclick="showTab('learning-activities')">Learning Activities</button>
-    <button class="tab-btn" onclick="showTab('quizizz-pd')">Quizizz Click&amp;Go PD</button>
-</nav>
-
-<div class="content">
-
-    <!-- ===== TAB 1: AI PLATFORMS ===== -->
-    <div id="ai-platforms" class="tab-section active">
-        <div class="section-intro">
-            <h2>AI Platforms Comparison</h2>
-            <p>A brief side-by-side of the best-known AI tools today &mdash; free and premium tiers at a glance.</p>
-        </div>
-        <div class="table-wrap">
-            <table>
-                <thead>
-                    <tr>
-                        <th>AI Tool</th>
-                        <th>Description</th>
-                        <th>Best Use Cases</th>
-                        <th>Free Version</th>
-                        <th>Premium Version</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><strong>ChatGPT</strong></td>
-                        <td>An advanced AI chatbot by OpenAI designed for conversations, content creation, coding, and research.</td>
-                        <td>General conversations, content creation, and AI-assisted coding.</td>
-                        <td>Access to GPT-3.5 with text-based interactions.</td>
-                        <td>ChatGPT Plus ($20/month) with GPT-4 Turbo, priority access, and faster responses.</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Claude AI</strong></td>
-                        <td>An AI assistant by Anthropic with a focus on safety, nuanced reasoning, and longer memory capabilities.</td>
-                        <td>Deep analytical reasoning, ethical AI use, and longer contextual understanding.</td>
-                        <td>Limited free usage with access to standard models.</td>
-                        <td>Claude Pro ($20/month) with access to Claude&rsquo;s most advanced models.</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Google Gemini</strong></td>
-                        <td>Google&rsquo;s AI platform designed for search, image generation, and integrated assistance across Google products.</td>
-                        <td>Google Search enhancements, multimedia generation, and educational applications.</td>
-                        <td>Basic AI assistance through Google Search and Gemini chat.</td>
-                        <td>Google Gemini Advanced with enhanced AI capabilities and deeper integrations.</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Microsoft Copilot</strong></td>
-                        <td>Microsoft&rsquo;s AI integrated into Office 365 and Windows, designed for productivity and automation.</td>
-                        <td>Business productivity, document generation, and AI-driven automation.</td>
-                        <td>Copilot offers basic AI-powered suggestions in Microsoft products.</td>
-                        <td>Microsoft Copilot Pro ($30/month) with business-grade AI support.</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Perplexity</strong></td>
-                        <td>An AI-powered search and research assistant that combines web browsing with natural language understanding.</td>
-                        <td>Real-time research, web browsing, and AI-powered knowledge discovery.</td>
-                        <td>Basic search and AI-powered responses available for free.</td>
-                        <td>Perplexity Pro ($20/month) with faster AI responses and enhanced research capabilities.</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </div>
-
-    <!-- ===== TAB 2: AI PROMPT INDEX ===== -->
-    <div id="ai-prompt-index" class="tab-section">
-        <div class="section-intro">
-            <h2>Artificial Intelligence Prompt Library Index</h2>
-            <p>A categorized index of AI prompts for educators. Browse by category or <a href="https://www.magicschool.ai/" target="_blank">access the full site</a> for live prompts.</p>
-        </div>
-        <div class="prompt-categories">
-            <div class="prompt-category">
-                <h4>🗂️ Administrative</h4>
-                <ul>
-                    <li>Developing Workflows</li>
-                    <li>Faculty Meeting Agenda Creator</li>
-                    <li>Reference Letters Writer</li>
-                    <li>SMART Goal Generator</li>
-                    <li>Summarize Meeting Notes</li>
-                    <li>Team Building Activities Creator</li>
-                </ul>
-            </div>
-            <div class="prompt-category">
-                <h4>📝 Assessment</h4>
-                <ul>
-                    <li>AI-Assisted Assignments (Students)</li>
-                    <li>AI-Resistant Assignment Developer</li>
-                    <li>Assessment Obstacles Evaluator</li>
-                    <li>Authentic Assessment Creator</li>
-                    <li>Bloom&rsquo;s Taxonomy Integrator</li>
-                    <li>Essay to Discussion Converter</li>
-                    <li>Exemplar Creator</li>
-                    <li>Exit Tickets Creator</li>
-                    <li>Formative Assessments Aligner &amp; Creator</li>
-                    <li>Multiple-Choice to Project Converter</li>
-                    <li>Quiz Creator (with &amp; without content)</li>
-                    <li>Rubric Creator</li>
-                    <li>Summative Tasks Generator</li>
-                </ul>
-            </div>
-            <div class="prompt-category">
-                <h4>💬 Communication</h4>
-                <ul>
-                    <li>Educational Philosopher Developer</li>
-                    <li>Email Responses Generator</li>
-                    <li>SlideDeck Creator (Slides or PPT)</li>
-                </ul>
-            </div>
-            <div class="prompt-category">
-                <h4>💡 Instructional Suggestions</h4>
-                <ul>
-                    <li>Analyzing for Authenticity</li>
-                    <li>Class vs. the Chatbot Games Creator</li>
-                    <li>Direct Instruction Planner</li>
-                    <li>&ldquo;Explain it to me like&rdquo; Differentiator</li>
-                    <li>Text to Emojis Translator</li>
-                    <li>Time Travel Guide Creator</li>
-                </ul>
-            </div>
-            <div class="prompt-category">
-                <h4>📚 Lesson Planning</h4>
-                <ul>
-                    <li>Alternative Teaching Methods Generator</li>
-                    <li>Apples to Apples Game Creator</li>
-                    <li>Common Misconceptions Analyzer</li>
-                    <li>Content Improvement Analyzer</li>
-                    <li>Creative Writing Assignments Generator</li>
-                    <li>Critical Thinking Questions Creator</li>
-                    <li>Debate Topic Creator</li>
-                    <li>Discussion Topics Generator</li>
-                    <li>Essay Topics Generator</li>
-                    <li>Essential Questions Developer</li>
-                    <li>Gamification Converter</li>
-                    <li>Goals to Objectives Breakdown Tool</li>
-                    <li>Graphic Organizer Creator</li>
-                    <li>Jeopardy Game Creator</li>
-                    <li>Lesson Closure Ideas Generator</li>
-                    <li>Lesson Hook Generator</li>
-                    <li>Lesson Idea Generator</li>
-                    <li>Lesson Plan Generator</li>
-                    <li>Leveled Study Guide Creator</li>
-                    <li>Math Games Creator</li>
-                    <li>Online Tutoring Plan Creator</li>
-                    <li>Personalized Quiz Creator</li>
-                    <li>Poetry Creator</li>
-                    <li>Problem-Based Learning (PBL) Creator</li>
-                    <li>Real-World Examples Creator</li>
-                    <li>Science Demonstrations Creator</li>
-                    <li>Standards to Text Aligner</li>
-                    <li>Strengths-Based Lesson Builder</li>
-                    <li>Syllabus Generator</li>
-                    <li>Tiered Assignment Generator</li>
-                    <li>Unit or Learning Objectives Creator</li>
-                    <li>Usability Modifier</li>
-                    <li>Virtual Science Tutor</li>
-                    <li>Vocabulary List Generator</li>
-                    <li>Worksheet Creator</li>
-                </ul>
-            </div>
-            <div class="prompt-category">
-                <h4>🎓 Professional Development</h4>
-                <ul>
-                    <li>Idea Generator</li>
-                    <li>Team Building Activities Developer</li>
-                    <li>Workshop Planner</li>
-                </ul>
-            </div>
-            <div class="prompt-category">
-                <h4>❤️ Social/Emotional Learning</h4>
-                <ul>
-                    <li>SEL prompts &amp; resources</li>
-                </ul>
-            </div>
-            <div class="prompt-category">
-                <h4>♿ Special/Exceptional Education</h4>
-                <ul>
-                    <li>Differentiation tools</li>
-                    <li>Accessibility supports</li>
-                </ul>
-            </div>
-            <div class="prompt-category">
-                <h4>🧑‍🎓 Student Resources</h4>
-                <ul>
-                    <li>AI Intro for Students Lessons</li>
-                    <li>Flashcard Creator</li>
-                    <li>&ldquo;Help me understand&rdquo; Explainer</li>
-                    <li>Research Project Ideas Generator</li>
-                    <li>Study Notes Creator</li>
-                    <li>Text Summarizer</li>
-                    <li>All Prompts</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-
-    <!-- ===== TAB 3: AI TOOLS ===== -->
-    <div id="ai-tools" class="tab-section">
-        <div class="section-intro">
-            <h2>Artificial Intelligence (A.I.) Tools</h2>
-            <p>The sheer number of A.I. tools available can be overwhelming. Here are a few current favorites curated for educators.</p>
-        </div>
-        <div class="tool-grid">
-            <div class="card">
-                <h3>Brisk Boost</h3>
-                <p>An AI-driven tool that provides real-time classroom insights and boosts student engagement.</p>
-                <p><span class="badge">Best for:</span> Monitoring student engagement, tracking learning progress, and optimizing instruction.</p>
-            </div>
-            <div class="card">
-                <h3>Class Companion</h3>
-                <p>An AI tool designed to provide feedback on student writing while encouraging revision and deeper thinking.</p>
-                <p><span class="badge">Best for:</span> Assisting students with writing development, detecting AI-written content, and improving written responses.</p>
-            </div>
-            <div class="card">
-                <h3>Diffit</h3>
-                <p>An AI-powered text simplification and differentiation tool for making content accessible to all learners.</p>
-                <p><span class="badge">Best for:</span> Adapting learning materials to different reading levels and accessibility needs.</p>
-            </div>
-            <div class="card">
-                <h3>Gravity IO</h3>
-                <p>An AI-powered visual collaboration platform for mapping ideas, planning projects, and managing workflows.</p>
-                <p><span class="badge">Best for:</span> Project-based learning, team collaboration, and instructional design.</p>
-            </div>
-            <div class="card">
-                <h3>MagicSchool AI</h3>
-                <p>An AI-powered platform designed to assist teachers with lesson planning, grading, and content generation.</p>
-                <p><span class="badge">Best for:</span> Automating lesson planning, generating instructional materials, and streamlining grading.</p>
-            </div>
-            <div class="card">
-                <h3>Mirror Talk</h3>
-                <p>An AI-driven speaking coach that helps students and educators refine their communication skills.</p>
-                <p><span class="badge">Best for:</span> Improving public speaking, language fluency, and student communication skills.</p>
-            </div>
-            <div class="card">
-                <h3>Otter AI</h3>
-                <p>AI-powered transcription software that converts speech into text in real-time.</p>
-                <p><span class="badge">Best for:</span> Lecture transcription, accessibility support, and summarizing meetings or discussions.</p>
-            </div>
-            <div class="card">
-                <h3>Padlet</h3>
-                <p>A digital bulletin board that allows for interactive collaboration, brainstorming, and resource sharing.</p>
-                <p><span class="badge">Best for:</span> Collaborative brainstorming, student engagement, and sharing instructional resources.</p>
-            </div>
-            <div class="card">
-                <h3>Parlay Ideas</h3>
-                <p>A discussion-based learning platform with AI integration that promotes critical thinking through structured student conversations.</p>
-                <p><span class="badge">Best for:</span> Promoting structured discussions, student-led learning, and critical thinking.</p>
-            </div>
-            <div class="card">
-                <h3>School AI</h3>
-                <p>An AI-powered teacher assistant that supports lesson planning, activity generation, and student progress tracking.</p>
-                <p><span class="badge">Best for:</span> Automating repetitive tasks, creating personalized learning experiences, and generating curriculum-aligned quizzes and resources.</p>
-            </div>
-            <div class="card">
-                <h3>Snorkl</h3>
-                <p>A video-based AI coaching tool that helps educators improve classroom instruction through self-reflection.</p>
-                <p><span class="badge">Best for:</span> Helping teachers reflect on instructional strategies and improve classroom management.</p>
-            </div>
-            <div class="card">
-                <h3>STORM</h3>
-                <p>A research prototype for interactive knowledge curation and AI-assisted writing.</p>
-                <p><span class="badge">Best for:</span> Helping students synthesize diverse perspectives, generate research-based outlines, and refine pre-writing skills.</p>
-            </div>
-        </div>
-    </div>
-
-    <!-- ===== TAB 4: FUN DIGITAL TOOLS ===== -->
-    <div id="fun-tools" class="tab-section">
-        <div class="section-intro">
-            <h2>Fun Digital Tools</h2>
-            <p>Random (but useful) tools that don&rsquo;t fit well into the other categories!</p>
-        </div>
-        <div class="tool-grid">
-            <div class="card">
-                <h3>Blackout Poetry Maker</h3>
-                <p>Blackout poetry is made by coloring over parts of an existing text so that only selected words remain visible, creating a poem. Create blackout poetry with any text or use their samples.</p>
-            </div>
-            <div class="card">
-                <h3>ClassPad.net</h3>
-                <p>An online calculator system designed for use by teachers and students in education &mdash; the online version of Casio&rsquo;s ClassPad, without the need for the physical device.</p>
-            </div>
-            <div class="card">
-                <h3>Classroomscreen</h3>
-                <p>All the classroom tools at your fingertips &mdash; timers, instructions, random selectors, and more. Use it face-to-face, digitally, or on an office wall monitor to share your schedule.</p>
-            </div>
-            <div class="card">
-                <h3>ClassTools.net</h3>
-                <p>A website full of awesome digital tools. Favorites include: <strong>Hotspot Image Annotator</strong> (upload image, click to create hotspots, generate a shareable link), <strong>SMS Generator</strong> (create animated &ldquo;chats&rdquo; between historical or fictional characters), and the <strong>Twister Template</strong> (create fictional status updates &mdash; great for historical perspective-taking).</p>
-            </div>
-            <div class="card">
-                <h3>Factile</h3>
-                <p>Create a Jeopardy-style game board in minutes. Factile is the #1 Jeopardy-style game creator for education.</p>
-            </div>
-            <div class="card">
-                <h3>Flippity.net</h3>
-                <p>Easily turn a Google Sheet into more than a dozen interactive activities for free. Favorites: Board Games, Flashcards, Flexcards (Multimedia Flashcards), Manipulatives, Timeline, Virtual Breakouts.</p>
-            </div>
-            <div class="card">
-                <h3>Gzaas</h3>
-                <p>Create full-screen messages for any occasion.</p>
-            </div>
-            <div class="card">
-                <h3>Hemingway Editor</h3>
-                <p>An editing tool that helps users improve their writing. Writing is color-coded and labeled for readability issues, passive voice, adverbs, and complex sentences.</p>
-            </div>
-            <div class="card">
-                <h3>Kami</h3>
-                <p>An online document annotation and markup tool. Highlight, underline, and strikethrough text in PDFs and other documents. Great for collaborative annotation.</p>
-            </div>
-            <div class="card">
-                <h3>Newspaper Snippet / Newspaper Generator</h3>
-                <p>Create an authentic-looking newspaper clipping for free with Newspaper Snippet, or a full &ldquo;fake&rdquo; newspaper with Newspaper Generator.</p>
-            </div>
-            <div class="card">
-                <h3>PDFCandy</h3>
-                <p>Modify PDFs for free. Every PDF tool you need is right here &mdash; merge, split, compress, convert, and more.</p>
-            </div>
-            <div class="card">
-                <h3>PhET Simulations</h3>
-                <p>Online simulations for science and math from the University of Colorado at Boulder. Free, research-based simulations for interactive science and math learning.</p>
-            </div>
-            <div class="card">
-                <h3>The Differentiator</h3>
-                <p>A great lesson planning tool for creating objectives related to Bloom&rsquo;s Taxonomy. Generates differentiated objectives by cognitive level.</p>
-            </div>
-            <div class="card">
-                <h3>TimeToast</h3>
-                <p>An easy-to-use timeline creator. Make a timeline, tell a story &mdash; discover the future, unearth the past.</p>
-            </div>
-            <div class="card">
-                <h3>Wakelet</h3>
-                <p>A versatile curation tool. Educators can share lesson plans, create interactive study guides, manage classroom projects, and engage students with multimedia collections.</p>
-            </div>
-            <div class="card">
-                <h3>Wordclouds.com</h3>
-                <p>A free online word cloud generator and tag cloud creator. Works on PC, tablet, or smartphone. Great for vocabulary, brainstorming, and visual summaries.</p>
-            </div>
-        </div>
-    </div>
-
-    <!-- ===== TAB 5: GAMIFICATION ===== -->
-    <div id="gamification" class="tab-section">
-        <div class="section-intro">
-            <h2>Gamification</h2>
-            <p>These are just a few of the more popular game-creation tools. They have similar characteristics &mdash; try them all and pick your favorites!</p>
-        </div>
-        <div class="game-grid">
-            <div class="game-card">
-                <h3>Blooket</h3>
-                <p>Fast-paced and highly competitive. Students love it! Multiple game modes with points, power-ups, and live competition.</p>
-            </div>
-            <div class="game-card">
-                <h3>Gimkit</h3>
-                <p>A game show for the classroom that requires knowledge, collaboration, and strategy to win. Students earn in-game currency by answering correctly.</p>
-            </div>
-            <div class="game-card">
-                <h3>Kahoot</h3>
-                <p>A formative assessment tool that can be used for team or individual game play. The classic live quiz platform &mdash; fast, familiar, and motivating.</p>
-            </div>
-            <div class="game-card">
-                <h3>Quizalize</h3>
-                <p>A review game creation tool great for in-class or homework. Awesome for differentiation and tracking individual student mastery data.</p>
-            </div>
-            <div class="game-card">
-                <h3>Quizizz</h3>
-                <p>A quiz game creation tool that can be played in the classroom or assigned for homework. AI-powered with tons of question types and meme feedback.</p>
-            </div>
-            <div class="game-card">
-                <h3>Quizlet</h3>
-                <p>Study millions of study sets or create your own. Includes a live class game option, flashcards, practice tests, and learn mode.</p>
-            </div>
-        </div>
-    </div>
-
-    <!-- ===== TAB 6: CHROME EXTENSIONS ===== -->
-    <div id="chrome-extensions" class="tab-section">
-        <div class="section-intro">
-            <h2>Google Chrome Extensions</h2>
-            <p>Explore the best Chrome extensions available for educators and students.</p>
-        </div>
-        <div class="tool-grid">
-            <div class="card">
-                <h3>Better Canvas</h3>
-                <p>Enhances the Canvas LMS experience by adding custom features, improved navigation, and layout customization.</p>
-                <p><span class="badge green">Free</span> Custom UI enhancements, improved navigation, and layout adjustments.</p>
-                <p><span class="badge amber">Note</span> Only supports Canvas &mdash; does not enhance Blackboard or D2L Brightspace.</p>
-            </div>
-            <div class="card">
-                <h3>Brisk Teaching</h3>
-                <p>A Chrome extension and web app that uses AI to generate lesson plans, automated feedback, and AI-enhanced grading.</p>
-                <p><span class="badge green">Free</span> Basic AI-powered lesson generation, limited assessment tools, Google Classroom integration.</p>
-                <p><span class="badge amber">Premium</span> Advanced AI features, more customization, and expanded assessment capabilities.</p>
-            </div>
-            <div class="card">
-                <h3>Clip.me</h3>
-                <p>A screenshot and screen recording extension. Capture, annotate, and share images or video clips directly from the browser.</p>
-                <p><span class="badge green">Free</span> Basic screenshot capture, annotations, and link sharing.</p>
-            </div>
-            <div class="card">
-                <h3>Diigo</h3>
-                <p>A powerful bookmarking and annotation tool. Highlight web pages, add sticky notes, and organize resources for easy retrieval.</p>
-                <p><span class="badge green">Free</span> Basic bookmarking, highlighting, and sticky notes with limited storage.</p>
-            </div>
-            <div class="card">
-                <h3>Edpuzzle</h3>
-                <p>Lets instructors embed interactive questions and notes into YouTube videos. Useful for self-paced video learning and flipped classrooms.</p>
-            </div>
-            <div class="card">
-                <h3>Google Keep</h3>
-                <p>Saves highlighted text, images, and links directly to Google Keep for easy retrieval. Helps with research organization and note-taking.</p>
-            </div>
-            <div class="card">
-                <h3>Just Read</h3>
-                <p>A customizable reader mode that removes ads, pop-ups, and distractions from web pages for a cleaner reading experience.</p>
-                <p><span class="badge green">Free</span> Basic reader mode with customization options.</p>
-            </div>
-            <div class="card">
-                <h3>Kami</h3>
-                <p>A PDF and document annotation tool with real-time collaboration. Supports highlighting, underlining, drawing, and text tools.</p>
-            </div>
-            <div class="card">
-                <h3>Knowt</h3>
-                <p>An AI-powered tool that automatically generates flashcards and quizzes from websites, PDFs, and notes.</p>
-                <p><span class="badge green">Free</span> Basic flashcard and quiz generation, note-saving, and Google Docs integration.</p>
-            </div>
-            <div class="card">
-                <h3>Loom</h3>
-                <p>Record &amp; share screen videos instantly. Great for tutorials, lesson walkthroughs, or giving detailed feedback on student work.</p>
-            </div>
-            <div class="card">
-                <h3>Mote</h3>
-                <p>A voice commenting and feedback extension. Record and insert voice notes directly into Google Docs, Slides, Sheets, and Forms.</p>
-                <p><span class="badge green">Free</span> Up to 30 seconds per voice note, basic transcription, and Google tools integration.</p>
-            </div>
-            <div class="card">
-                <h3>OneTab</h3>
-                <p>Converts all open tabs into a single list, reducing memory usage and keeping research or lesson planning organized.</p>
-            </div>
-            <div class="card">
-                <h3>Print Friendly PDF</h3>
-                <p>Converts web pages into clean, printable PDFs, removing ads and unnecessary elements. Ideal for archiving resources and printing articles.</p>
-            </div>
-            <div class="card">
-                <h3>Read Aloud</h3>
-                <p>Uses text-to-speech (TTS) to read aloud web pages, PDFs, and Google Docs. Supports multiple languages and voice options.</p>
-                <p><span class="badge green">Free</span> Basic TTS functionality with adjustable speeds.</p>
-            </div>
-            <div class="card">
-                <h3>Rememberry</h3>
-                <p>A language learning and vocabulary builder extension that translates words and phrases on any webpage and adds them to flashcard review.</p>
-                <p><span class="badge green">Free</span> Basic translations, flashcard creation, and spaced repetition learning.</p>
-            </div>
-            <div class="card">
-                <h3>Tango</h3>
-                <p>Automatically creates step-by-step guides as you perform tasks in your browser. Perfect for creating tutorials for students or documenting workflows.</p>
-            </div>
-            <div class="card">
-                <h3>Trancy</h3>
-                <p>A language learning and subtitle extension providing dual subtitles, AI-generated transcripts, and instant translations for videos.</p>
-                <p><span class="badge green">Free</span> Basic dual subtitles, instant translations, and AI-generated transcripts.</p>
-            </div>
-            <div class="card">
-                <h3>Turn Off the Lights</h3>
-                <p>Dims the background of web pages and videos, creating a theater-like experience. Great for reducing distraction when showing videos in class.</p>
-                <p><span class="badge green">Free</span> Full functionality including auto-dimming, custom opacity, and night mode.</p>
-            </div>
-            <div class="card">
-                <h3>Wakelet</h3>
-                <p>Save web pages, articles, videos, and images directly to your Wakelet collections with one click. Ideal for curating and sharing resources.</p>
-                <p><span class="badge green">Completely Free</span> Unlimited collections and collaboration &mdash; no premium tier.</p>
-            </div>
-            <div class="card">
-                <h3>Workona</h3>
-                <p>A tab and workspace organizer. Manage multiple projects, research sessions, and workflows by grouping related tabs into named workspaces.</p>
-                <p><span class="badge green">Free</span> Up to 5 workspaces, unlimited tab management, and session saving.</p>
-            </div>
-        </div>
-    </div>
-
-    <!-- ===== TAB 7: GOOGLE EXTRAS ===== -->
-    <div id="google-extras" class="tab-section">
-        <div class="section-intro">
-            <h2>Google&rsquo;s Extra Tools</h2>
-            <p>A collection of Google&rsquo;s extra tools and experimental sites that may surprise you!</p>
-        </div>
-        <div class="tool-grid">
-            <div class="card">
-                <h3>Chrome Music Lab</h3>
-                <p>Play with simple melodies to learn how music works. Great for exploring sound, rhythm, and composition in an accessible way.</p>
-            </div>
-            <div class="card">
-                <h3>Docs to Slides</h3>
-                <p>A Chrome extension to send text from a Google Doc to a Google Slides presentation automatically.</p>
-            </div>
-            <div class="card">
-                <h3>GenType</h3>
-                <p>Create one-of-a-kind, AI-generated alphabets from any idea. Type a concept and watch it become a custom font.</p>
-            </div>
-            <div class="card">
-                <h3>Google Arts &amp; Culture</h3>
-                <p>An online platform providing access to cultural artifacts, art, and history from institutions around the world. Includes virtual tours and street view of cultural landmarks.</p>
-            </div>
-            <div class="card">
-                <h3>Google Keep</h3>
-                <p>A Chrome app and mobile app for quick note-taking. Notes can be color-coded and exported to Google Docs.</p>
-            </div>
-            <div class="card">
-                <h3>Google Labs</h3>
-                <p>The home for Google&rsquo;s AI Experiments &mdash; early-access experiments and tools from Google&rsquo;s research teams.</p>
-            </div>
-            <div class="card">
-                <h3>Google Ngram</h3>
-                <p>Examine the history and evolution of vocabulary and terminology in literature and recorded documents over time. Includes a &ldquo;Getting Started&rdquo; resource from the University of Pennsylvania.</p>
-            </div>
-            <div class="card">
-                <h3>Google Trends</h3>
-                <p>See the topics people are &mdash; or aren&rsquo;t &mdash; following, practically in real time. Also available: a TV screen grid of trending searches in real-time.</p>
-                <p><span class="badge amber">Note</span> Be mindful of topics &mdash; some are for older audiences.</p>
-            </div>
-            <div class="card">
-                <h3>Google Trusted Tester Form</h3>
-                <p>Interested in becoming a Google Trusted Tester? Fill out the form for a chance at selection for early access to new Google products.</p>
-            </div>
-            <div class="card">
-                <h3>Illuminate by Google</h3>
-                <p>An experimental technology that uses AI to adapt web content to your learning preferences. Generates audio discussions from documents to make content more accessible.</p>
-            </div>
-            <div class="card">
-                <h3>Inside a Genius Mind</h3>
-                <p>Dive into Leonardo Da Vinci&rsquo;s personal notebooks &mdash; his codices &mdash; exploring themes across time and subject matter.</p>
-            </div>
-            <div class="card">
-                <h3>Learn About</h3>
-                <p>An easier way to &ldquo;Learn About&rdquo; new topics at your own pace using conversational AI and Google&rsquo;s knowledge graph.</p>
-            </div>
-            <div class="card">
-                <h3>MusicFX DJ</h3>
-                <p>A generative AI tool that allows users to create music in real-time by inputting text prompts and mixing musical elements.</p>
-            </div>
-            <div class="card">
-                <h3>Music LM Workshop</h3>
-                <p>Describe a musical idea and hear it come to life. An experimental AI tool that turns text descriptions into music.</p>
-            </div>
-            <div class="card">
-                <h3>NotebookLM</h3>
-                <p>An AI-powered collaborator that helps you do your best thinking. Upload your documents and NotebookLM becomes an expert in your sources &mdash; can generate audio summaries.</p>
-            </div>
-            <div class="card">
-                <h3>Paint with Music</h3>
-                <p>Turn your paint brush into musical instruments and compose on sensorial canvases. A creative intersection of visual art and sound.</p>
-            </div>
-            <div class="card">
-                <h3>Say What You See</h3>
-                <p>Learn and practice the art of image prompting with quick games and challenges. Great for teaching AI literacy and prompt engineering.</p>
-            </div>
-            <div class="card">
-                <h3>TextFX</h3>
-                <p>Enter a word and generate creative language possibilities. For rappers, writers, wordsmiths, and everyone in between &mdash; powered by Google&rsquo;s AI.</p>
-            </div>
-            <div class="card">
-                <h3>Whisk</h3>
-                <p>A Google Experiment to create a narrative with AI using images as prompts instead of text. Drag in images and generate new scenes.</p>
-            </div>
-            <div class="card">
-                <h3>Word Synth</h3>
-                <p>A fun way to play with speech and music together. An interactive AI experiment from Google.</p>
-            </div>
-        </div>
-    </div>
-
-    <!-- ===== TAB 8: LEARNING ACTIVITIES ===== -->
-    <div id="learning-activities" class="tab-section">
-        <div class="section-intro">
-            <h2>Learning Activities: Quizzes, Tests, Classwork, and Homework</h2>
-            <p>These tools can be set up for automatic grading &mdash; don&rsquo;t spend time grading multiple choice assignments. You can also use some of these tools to ask open-ended questions and grade them one at a time.</p>
-        </div>
-        <div class="tool-grid">
-            <div class="card">
-                <h3>Actively Learn</h3>
-                <p>An online literacy platform for ELA, Social Studies, and Science. Assign texts and videos with embedded questions, notes, and discussion prompts. Supports automatic and manual grading.</p>
-            </div>
-            <div class="card">
-                <h3>Answer Garden</h3>
-                <p>A minimalist feedback tool. Doesn&rsquo;t collect student identifiers, but allows students to submit short responses that aggregate into a live word cloud or list.</p>
-            </div>
-            <div class="card">
-                <h3>CommonLit</h3>
-                <p>Assign and grade within the platform. The CommonLit Digital Library contains thousands of free, standards-aligned literary and informational texts with built-in assessments.</p>
-            </div>
-            <div class="card">
-                <h3>Decktoys</h3>
-                <p>Create digital &ldquo;breakouts&rdquo; and/or learning paths for students to follow. Build complete lessons with activities, checks for understanding, and branching paths.</p>
-            </div>
-            <div class="card">
-                <h3>Desmos</h3>
-                <p>Specifically dedicated to math engagement and real-world mathematics applications. Develop critical thinking through graphing, geometry, and interactive math activities.</p>
-            </div>
-            <div class="card">
-                <h3>Edpuzzle</h3>
-                <p>Engagement you can see, results you can measure. Empower students to take an active role in their learning with interactive video assignments and auto-graded questions.</p>
-            </div>
-            <div class="card">
-                <h3>Figjam</h3>
-                <p>A collaborative online whiteboard to brainstorm and collaborate, all in one place. Great for visual thinking, concept mapping, and group work.</p>
-            </div>
-            <div class="card">
-                <h3>Formative</h3>
-                <p>A fantastic assessment platform that allows students to draw images, insert images, label pictures, and submit open-ended responses alongside auto-graded questions.</p>
-            </div>
-            <div class="card">
-                <h3>GeoGebra</h3>
-                <p>A free mathematics application for geometry, graphing, and more. More than a set of free tools &mdash; a community of millions sharing math activities and resources.</p>
-            </div>
-            <div class="card">
-                <h3>Insert Learning</h3>
-                <p>Keeps students engaged and active learners with interactive questions, discussions, videos, and live annotations layered on top of any web page.</p>
-            </div>
-            <div class="card">
-                <h3>Knowt</h3>
-                <p>The #1 AI-powered alternative to Quizlet. Uses machine learning to automatically turn notes into flashcards, practice tests, and study guides.</p>
-            </div>
-            <div class="card">
-                <h3>Newsela</h3>
-                <p>A comprehension platform with premium features. Pulls content from popular sites such as History.com and the Washington Post, with Lexile-leveled reading options.</p>
-            </div>
-            <div class="card">
-                <h3>Socrative</h3>
-                <p>Effortlessly assess and engage your students while visualizing learning progress in real-time with instant results, quizzes, exit tickets, and space races.</p>
-            </div>
-            <div class="card">
-                <h3>Wizer</h3>
-                <p>Create and assign &ldquo;smart worksheets.&rdquo; Add video, audio, images, and a variety of question types, all wrapped in a student-friendly digital format.</p>
-            </div>
-        </div>
-    </div>
-
-    <!-- ===== TAB 9: QUIZIZZ CLICK & GO PD ===== -->
-    <div id="quizizz-pd" class="tab-section">
-        <div class="section-intro">
-            <h2>NEW! Quizizz Click&amp;Go PD</h2>
-            <p>Check out this amazing Click &amp; Go PD resource from the Quizizz Newsletter! Looking for an engaging way to learn about your favorite edtech tools? These Click &amp; Go Free PD Resources are ready to use. This PD resource was super popular on Twitter/X!</p>
-            <p style="margin-top:8px; font-size:13px; color:#888;">— Alana Colabella, Community Manager, @alanacolabella</p>
         </div>
 
-        <div class="card" style="margin-bottom:24px;">
-            <h3>For Teachers</h3>
-            <p>Each ed-tech platform below has four self-paced PD options:</p>
-            <div class="table-wrap" style="margin-top:16px;">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Ed-Tech Platform</th>
-                            <th>Interactive Video</th>
-                            <th>Interactive Slides</th>
-                            <th>Gamified Quiz</th>
-                            <th>Interactive Passage</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr><td><strong>Canva for Education</strong></td><td>Watch Video</td><td>Explore Slides</td><td>Test your knowledge</td><td>Read about it</td></tr>
-                        <tr><td><strong>Quizizz</strong></td><td>Watch Video</td><td>Explore Slides</td><td>Test your knowledge</td><td>Read about it</td></tr>
-                        <tr><td><strong>Book Creator</strong></td><td>Watch Video</td><td>Explore Slides</td><td>Test your knowledge</td><td>Read about it</td></tr>
-                        <tr><td><strong>Nearpod</strong></td><td>Watch Video</td><td>Explore Slides</td><td>Test your knowledge</td><td>Read about it</td></tr>
-                        <tr><td><strong>Padlet</strong></td><td>Watch Video</td><td>Explore Slides</td><td>Test your knowledge</td><td>Read about it</td></tr>
-                        <tr><td><strong>Edpuzzle</strong></td><td>Watch Video</td><td>Explore Slides</td><td>Test about it</td><td>Read about it</td></tr>
-                        <tr><td><strong>Wakelet</strong></td><td>Watch Video</td><td>Explore Slides</td><td>Test your knowledge</td><td>Read about it</td></tr>
-                        <tr><td><strong>Blooket</strong></td><td>Watch Video</td><td>Explore Slides</td><td>Test your knowledge</td><td>Read about it</td></tr>
-                        <tr><td><strong>Gimkit</strong></td><td>Watch Video</td><td>Explore Slides</td><td>Test your knowledge</td><td>Read about it</td></tr>
-                        <tr><td><strong>Kahoot</strong></td><td>Watch Video</td><td>Explore Slides</td><td>Test your knowledge</td><td>Read about it</td></tr>
-                        <tr><td><strong>Flip</strong></td><td>Watch Video</td><td>Explore Slides</td><td>Test your knowledge</td><td>Read about it</td></tr>
-                        <tr><td><strong>Pear Deck</strong></td><td>Watch Video</td><td>Explore Slides</td><td>Test your knowledge</td><td>Read about it</td></tr>
-                        <tr><td><strong>Classkick</strong></td><td>Watch Video</td><td>Explore Slides</td><td>Test your knowledge</td><td>Read about it</td></tr>
-                        <tr><td><strong>Formative</strong></td><td>Watch Video</td><td>Explore Slides</td><td>Test your knowledge</td><td>Read about it</td></tr>
-                        <tr><td><strong>Seesaw</strong></td><td>Watch Video</td><td>Explore Slides</td><td>Test your knowledge</td><td>Read about it</td></tr>
-                    </tbody>
-                </table>
+        <div class="tab-section" id="tab-ai-tools">
+            <div class="section-intro">
+                <h2>Artificial Intelligence (A.I.) Tools</h2>
+                <p>The sheer number of A.I. Tools available can be overwhelming.  Here are a few of my current favorites:</p>
             </div>
-            <p style="margin-top:12px; font-size:13px; color:#888;">Visit <a href="https://quizizz.com/" target="_blank">Quizizz.com</a> to access the live Click &amp; Go PD links and request/submit additional topics.</p>
-        </div>
-
-        <div class="card">
-            <h3>Top Collections</h3>
-            <p>Quizizz also maintains curated top collections for professional development, subject-area resources, and classroom-ready activities. Access these through the Quizizz library.</p>
-        </div>
-    </div>
-
-</div><!-- end .content -->
-
-<div class="site-footer">
-    <p><strong>NC3ADL Digital Tools Index 2025</strong></p>
-    <p>Curated and maintained by <strong>Angela Westmoreland</strong> &mdash; NC3ADL Vice President &middot; Fayetteville Technical Community College</p>
-    <p>Maintained since 2017 for all 58 NC community colleges &middot; <a href="https://www.nc3adl.org/" target="_blank">NC3ADL Official Site</a></p>
-    <p style="margin-top:8px; font-size:12px; color:#718096;">
-        &copy; 2025 Angela Westmoreland &middot;
-        <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a>
-        &middot; Free for educational use
-    </p>
+            <div class="tool-grid">
+<div class="tool-card"><div class="tool-link"><a href="https://www.briskteaching.com/" target="_blank" rel="noopener">Brisk Boost</a></div><div class="tool-desc">An AI-driven tool that provides real-time classroom insights and boosts student engagement.<div class="tool-extra">Best for monitoring student engagement, tracking learning progress, and optimizing instruction.</div></div></div>
+<div class="tool-card"><div class="tool-link"><a href="https://classcompanion.com/" target="_blank" rel="noopener">Class Companion</a></div><div class="tool-desc">An AI tool designed to provide feedback on student writing while encouraging revision and deeper thinking.<div class="tool-extra">Best for assisting students with writing development, detecting AI-written content, and improving written responses.</div></div></div>
+<div class="tool-card"><div class="tool-link"><a href="https://web.diffit.me/" target="_blank" rel="noopener">Diffit</a></div><div class="tool-desc">An AI-powered text simplification and differentiation tool for making content accessible to all learners.<div class="tool-extra">Best for adapting learning materials to different reading levels and accessibility needs.</div></div></div>
+<div class="tool-card"><div class="tool-link"><a href="https://usegravity.io/" target="_blank" rel="noopener">Gravity IO</a></div><div class="tool-desc">An AI-powered visual collaboration platform for mapping ideas, planning projects, and managing workflows.<div class="tool-extra">Best for project-based learning, team collaboration, and instructional design.</div></div></div>
+<div class="tool-card"><div class="tool-link"><a href="http://ai" target="_blank" rel="noopener">MagicSchool AI</a></div><div class="tool-desc">An AI-powered platform designed to assist teachers with lesson planning, grading, and content generation.<div class="tool-extra">Best for automating lesson planning, generating instructional materials, and streamlining grading.</div></div></div>
+<div class="tool-card"><div class="tool-link"><a href="https://mirrortalk.ai/" target="_blank" rel="noopener">Mirror Talk</a></div><div class="tool-desc">An AI-driven speaking coach that helps students and educators refine their communication skills.<div class="tool-extra">Best for improving public speaking, language fluency, and student communication skills.</div></div></div>
+<div class="tool-card"><div class="tool-link"><a href="https://otter.ai/" target="_blank" rel="noopener">Otter AI</a></div><div class="tool-desc">AI-powered transcription software that converts speech into text in real-time.<div class="tool-extra">Best for lecture transcription, accessibility support, and summarizing meetings or discussions.</div></div></div>
+<div class="tool-card"><div class="tool-link"><a href="https://padlet.com/" target="_blank" rel="noopener">Padlet</a></div><div class="tool-desc">A digital bulletin board that allows for interactive collaboration, brainstorming, and resource sharing.<div class="tool-extra">Best for collaborative brainstorming, student engagement, and sharing instructional resources.</div></div></div>
+<div class="tool-card"><div class="tool-link"><a href="https://parlayideas.com/" target="_blank" rel="noopener">Parlay Ideas</a></div><div class="tool-desc">A discussion-based learning platform with AI integration that promotes critical thinking through structured student conversations.<div class="tool-extra">Best for promoting structured discussions, student-led learning, and critical thinking.</div></div></div>
+<div class="tool-card"><div class="tool-link"><a href="https://schoolai.com/" target="_blank" rel="noopener">School AI</a></div><div class="tool-desc">An AI-powered teacher assistant that supports lesson planning, activity generation, and student progress tracking.<div class="tool-extra">Best for automating repetitive tasks, creating personalized learning experiences, and generating curriculum-aligned quizzes and resources.</div></div></div>
+<div class="tool-card"><div class="tool-link"><a href="https://snorkl.app/" target="_blank" rel="noopener">Snorkl</a></div><div class="tool-desc">A video-based AI coaching tool that helps educators improve classroom instruction through self-reflection.<div class="tool-extra">Best for helping teachers reflect on instructional strategies and improve classroom management.</div></div></div>
+<div class="tool-card"><div class="tool-link"><a href="https://storm.genie.stanford.edu/" target="_blank" rel="noopener">STORM</a></div><div class="tool-desc">A research prototype for interactive knowledge curation and AI-assisted writing.<div class="tool-extra">Best for helping students synthesize diverse perspectives, generate research-based outlines, and refine pre-writing skills.</div></div></div>
 </div>
+        </div>
 
-<script>
-    function showTab(id) {
-        document.querySelectorAll('.tab-section').forEach(s => s.classList.remove('active'));
-        document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-        document.getElementById(id).classList.add('active');
-        event.target.classList.add('active');
-    }
-</script>
+        <div class="tab-section" id="tab-fun-tools">
+            <div class="section-intro">
+                <h2>Fun Digital Tools</h2>
+                <p>Random (but useful) tools that don’t fit well into the other categories!</p>
+            </div>
+            <div class="tool-grid">
+<div class="tool-card"><div class="tool-link"><a href="https://www.classpad.app/" target="_blank" rel="noopener">https://www.classpad.app/</a></div><div class="tool-desc">ClassPad.net is an online calculator system that's designed for use by teachers and students in education.<br>This is not to be confused with the real-world gadget version, simply called ClassPad, which was released by Casio. This online version works in a very similar way, only without the need for the physical device.<br><a href="https://justread.link/bd5OP_W9l" target="_blank" rel="noopener">What is Classpad.net and How do I use it?</a></div></div>
+<div class="tool-card"><div class="tool-link"><a href="https://classroomscreen.com/" target="_blank" rel="noopener">https://classroomscreen.com/</a></div><div class="tool-desc">With Classroomscreen, you've got all the classroom tools at your fingertips. Whether you need a timer or would like to show your instructions, Classroomscreen has a variety of features that support your class activities, stimulate engagement, and help your students get to work. You can use this tool face-to-face or digitally. It can even be used in an office on a wall monitor to share your schedule!</div></div>
+<div class="tool-card"><div class="tool-link"><a href="http://classtools" target="_blank" rel="noopener">http://classtools</a></div><div class="tool-desc">ClassTools.net is a website chock-full of awesome digital tools! From creating fake text message conversations, to scrolling instructions, this website has it all! See below for some of our favorite tools from this site.</div></div>
+<div class="tool-card"><div class="tool-link"><a href="https://www.classtools.net/hotspot/" target="_blank" rel="noopener">https://www.classtools.net/hotspot/</a></div><div class="tool-desc">ClassTools Favorite:<br>Create an annotated image with Hotspots at Classtools.net.<br>Upload your image.<br>Click to create hotspots.<br>Generate a link to share.<br>Embed in your website.</div></div>
+<div class="tool-card"><div class="tool-link"><a href="https://www.classtools.net/SMS/" target="_blank" rel="noopener">https://www.classtools.net/SMS/</a></div><div class="tool-desc">ClassTools Favorite:<br>Use the SMS Generator at Classtools.net to create an animated “chat” between two historical or fictional characters! </div></div>
+<div class="tool-card"><div class="tool-link"><a href="https://www.classtools.net/twister/" target="_blank" rel="noopener">https://www.classtools.net/twister/</a></div><div class="tool-desc">ClassTools Favorite:<br>The "Twister" template from Classtools.net allows you to create fictional "status updates" that can then be printed off for display purposes. Students could be asked<br>What are the most important people in this topic?<br>What was their most important moment within the topic?<br>What would their comment be about it?<br>What particular keywords would they use within their comment?<br>What hashtag could they maybe use at the end of the message?<br>What nickname did they have / could we invent to use as their username?</div></div>
+<div class="tool-card"><div class="tool-link"><a href="https://www.playfactile.com/" target="_blank" rel="noopener">https://www.playfactile.com/</a></div><div class="tool-desc">Create a jeopardy-style game board in minutes! Factile is the #1 Jeopardy-style game creator for education.</div></div>
+<div class="tool-card"><div class="tool-link"><a href="http://flippity.net" target="_blank" rel="noopener">http://flippity.net</a></div><div class="tool-desc">Easily turn a Google Sheet into more than a dozen interactive activities, for Free with Flippity.net! Click “Instructions” on the activity tile and follow the directions.<br>A few Flippity favorites are:<br><a href="https://www.flippity.net/BoardGame.htm" target="_blank" rel="noopener">Board Games</a><br><a href="https://www.flippity.net/Flashcards.htm" target="_blank" rel="noopener">Flashcards</a><br>“Flexcards” (Multimedia Flashcards)<br><a href="https://www.flippity.net/Manipulatives.htm" target="_blank" rel="noopener">Manipulatives</a><br><a href="https://www.flippity.net/Timeline.htm" target="_blank" rel="noopener">Timeline</a><br><a href="https://www.flippity.net/VirtualBreakout.htm" target="_blank" rel="noopener">Virtual Breakouts</a></div></div>
+<div class="tool-card"><div class="tool-link"><a href="https://www.gzaas.com/" target="_blank" rel="noopener">https://www.gzaas.com/</a></div><div class="tool-desc">Create full-screen messages for any occasion with Gzaas.</div></div>
+<div class="tool-card"><div class="tool-link"><a href="http://www.hemingwayapp.com/" target="_blank" rel="noopener">http://www.hemingwayapp.com/</a></div><div class="tool-desc">Hemingway Editor is an editing tool that helps users improve their writing. Writing is color-coded and labeled for readability, wordiness, tone, grammar, punctuation, and more.</div></div>
+<div class="tool-card"><div class="tool-link"><a href="https://www.kamihq.com/" target="_blank" rel="noopener">https://www.kamihq.com/</a></div><div class="tool-desc">Kami is an online document annotation and markup tool. You can highlight, underline, and strikethrough text in PDF and other document formats. You can also add text boxes, shapes, and images. Kami works with Google Drive. With Kami, you can easily collaborate on documents in the classroom while avoiding the hassles of printing documents.</div></div>
+<div class="tool-card"><div class="tool-link"><a href="https://www.fodey.com/generators/newspaper/snippet.asp" target="_blank" rel="noopener">https://www.fodey.com/generators/newspaper/snippet.asp</a></div><div class="tool-desc">Create an authentic-looking newspaper clipping for free with Newspaper Snippet.</div></div>
+<div class="tool-card"><div class="tool-link"><a href="http://newspaper.jaguarpaw.co.uk/" target="_blank" rel="noopener">http://newspaper.jaguarpaw.co.uk/</a></div><div class="tool-desc">Create a "fake" newspaper with this Newspaper Generator.</div></div>
+<div class="tool-card"><div class="tool-link"><a href="https://pdfcandy.com/" target="_blank" rel="noopener">https://pdfcandy.com/</a></div><div class="tool-desc">Modify PDFs for free with PDFCandy! Every PDF tool you need is right here.</div></div>
+<div class="tool-card"><div class="tool-link"><a href="https://phet.colorado.edu/" target="_blank" rel="noopener">https://phet.colorado.edu/</a></div><div class="tool-desc">PhET Simulations are online simulations for science and math from the University of Colorado at Boulder. PhET provides fun, free, interactive, research-based science and mathematics simulations. As users interact with these tools, they get immediate feedback about the effect of the changes they made. This allows them to investigate cause-and-effect relationships and answer scientific questions through exploration of the simulation. </div></div>
+<div class="tool-card"><div class="tool-link"><a href="http://byrdseed.com/differentiator/" target="_blank" rel="noopener">http://byrdseed.com/differentiator/</a></div><div class="tool-desc">The Differentiator is a great lesson planning tool for creating objectives related to Bloom's Taxonomy.</div></div>
+<div class="tool-card"><div class="tool-link"><a href="https://www.timetoast.com/" target="_blank" rel="noopener">https://www.timetoast.com/</a></div><div class="tool-desc">An easy-to-use timeline creator! Make a timeline, tell a story with TimeToast! Discover the Future, Unearth the Past - Timetoast isn't just a timeline maker, it's your canvas for vibrant storytelling.</div></div>
+<div class="tool-card"><div class="tool-link"><a href="https://wakelet.com/" target="_blank" rel="noopener">https://wakelet.com/</a></div><div class="tool-desc">Wakelet is a versatile tool suitable for various purposes across different user groups.<br>Educators can use it to share lesson plans, create interactive study guides, manage classroom projects, and engage students with multimedia resources. Students can organize class notes, collaborate on group projects, and build portfolios showcasing their achievements. Individuals can curate personal interests, create digital portfolios, organize research, or share travel plans and creative projects. For businesses, Wakelet is ideal for curating marketing content, managing team projects, creating knowledge bases, and presenting case studies or product information in an organized and professional manner.</div></div>
+<div class="tool-card"><div class="tool-link"><a href="https://www.wordclouds.com/" target="_blank" rel="noopener">https://www.wordclouds.com/</a></div><div class="tool-desc">Wordclouds.com is a free online word cloud generator and tag cloud creator. Wordclouds.com works on your PC, Tablet or smartphone. Paste text, upload a document or open an URL to automatically generate a word- or tag cloud. Or enter individual words manually in the word list. Pick a shape, select colors and fonts and choose how to draw the words. Wordclouds.com can also generate clickable word clouds with links (image map). When you are satisfied with the result, save the image and share it online.</div></div>
+</div>
+        </div>
+
+        <div class="tab-section" id="tab-gamification">
+            <div class="section-intro">
+                <h2>Gamification</h2>
+                <p>These are just a few of the more popular game-creation tools.  They have similar characteristics, so try them all and pick your favorites!</p>
+            </div>
+            <div class="tool-grid">
+<div class="tool-card"><div class="tool-link"><a href="https://www.gimkit.com/" target="_blank" rel="noopener">https://www.gimkit.com/</a></div><div class="tool-desc">Gimkit is a game show for the classroom that requires knowledge, collaboration, and strategy to win.</div></div>
+<div class="tool-card"><div class="tool-link"><a href="https://create.kahoot.it/" target="_blank" rel="noopener">https://create.kahoot.it/</a></div><div class="tool-desc">Kahoot is a formative assessment tool that can be used for team or individual game play.</div></div>
+<div class="tool-card"><div class="tool-link"><a href="https://www.quizalize.com/" target="_blank" rel="noopener">https://www.quizalize.com/</a></div><div class="tool-desc">Quizalize is a review game creation tool that is great for in-class or homework. Awesome for differentiation and tracking learning.</div></div>
+<div class="tool-card"><div class="tool-link"><a href="https://quizizz.com/" target="_blank" rel="noopener">https://quizizz.com/</a></div><div class="tool-desc">Quizizz is a quiz game creation tool that can be played in the classroom or assigned for homework. With AI power and tons of free features, this platform can’t be beat!</div></div>
+<div class="tool-card"><div class="tool-link"><a href="https://quizlet.com/" target="_blank" rel="noopener">https://quizlet.com/</a></div><div class="tool-desc">With Quizlet, study millions of study sets or create your own!  Includes a class game option for a live game.</div></div>
+</div>
+        </div>
+
+        <div class="tab-section" id="tab-chrome">
+            <div class="section-intro">
+                <h2>Google Chrome Extensions</h2>
+                <p>Explore the best Chrome extensions available.</p>
+            </div>
+            <div class="tool-grid">
+<div class="tool-card"><div class="tool-link"><a href="https://chromewebstore.google.com/detail/brisk-teaching-%E2%80%93-ai-assis/pcblbflgdkdfdjpjifeppkljdnaekohj" target="_blank" rel="noopener">https://chromewebstore.google.com/detail/brisk-teaching-%E2%80%93-ai-assis/pcblbflgdkdfdjpjifeppkljdnaekohj</a></div><div class="tool-desc">Brisk Teaching<br>Brisk Teaching (Chrome Extension &amp; AI App) 🎓 – A Chrome extension and web app designed for teachers that uses AI to generate lesson materials, assessments, and feedback directly inside Google Apps.<br>Best for:<br>Instructors who need quick lesson plan generation, automated feedback, and AI-enhanced grading.<br>Educators who want to create quizzes, rubrics, and differentiated assignments with AI assistance.<br>Free Version: Basic AI-powered lesson generation, limited assessment tools, and integration with Google Classroom.<br>Premium Version: Advanced AI features, more customization options for lesson materials, and expanded assessment capabilities.</div></div>
+<div class="tool-card"><div class="tool-link"><a href="https://chromewebstore.google.com/detail/clippeme-save-posts-in-ju/paoeccckpgalcckjjeajohcofbacphdo?hl=en" target="_blank" rel="noopener">https://chromewebstore.google.com/detail/clippeme-save-posts-in-ju/paoeccckpgalcckjjeajohcofbacphdo?hl=en</a></div><div class="tool-desc">Clip.me<br>Clip.me 📸 – A screenshot and screen recording extension that allows users to capture, annotate, and share images or videos from their screen instantly. Supports cloud storage and quick sharing via links.<br>Best for: Instructors who need to capture and share screenshots for instructional materials, presentations, or tutorials. Also great for students taking visual notes or collaborating on assignments.<br>Free Version: Basic screenshot capture, annotations, and link sharing.<br>Premium Version: Additional storage, advanced editing tools, and high-resolution screen recording.</div></div>
+<div class="tool-card"><div class="tool-link"><a href="https://chromewebstore.google.com/detail/diigo-web-collector-captu/pnhplgjpclknigjpccbcnmicgcieojbh?hl=en" target="_blank" rel="noopener">https://chromewebstore.google.com/detail/diigo-web-collector-captu/pnhplgjpclknigjpccbcnmicgcieojbh?hl=en</a></div><div class="tool-desc">Diigo<br>Diigo is a powerful bookmarking and annotation tool that allows users to highlight web pages, add sticky notes, and organize resources into collections. Includes social features for sharing annotated content.<br>Best for: Instructors and students who need research organization, collaborative note-taking, and quick access to saved resources.<br>Free Version: Basic bookmarking, highlighting, and sticky notes with limited storage.<br>Premium Version: More storage, full-page annotations, text-to-speech, and image OCR (optical character recognition).</div></div>
+<div class="tool-card"><div class="tool-link"><a href="https://chromewebstore.google.com/detail/edpuzzle/oligonmocnihangdjlloenpndnniikol?hl=en" target="_blank" rel="noopener">https://chromewebstore.google.com/detail/edpuzzle/oligonmocnihangdjlloenpndnniikol?hl=en</a></div><div class="tool-desc">Edpuzzle<br>Edpuzzle lets instructors embed interactive questions and notes into YouTube videos. It is useful for self-paced video lessons and assessments as well as in-class engagement.</div></div>
+<div class="tool-card"><div class="tool-link"><a href="https://chromewebstore.google.com/detail/google-keep-chrome-extens/lpcaedmchfhocbbapmcbpinfpgnhiddi?hl=en" target="_blank" rel="noopener">https://chromewebstore.google.com/detail/google-keep-chrome-extens/lpcaedmchfhocbbapmcbpinfpgnhiddi?hl=en</a></div><div class="tool-desc">Google Keep<br>The Google Keep Extension saves highlighted text, images, and links directly to Google Keep for easy retrieval. It helps instructors jot down quick lesson ideas or bookmark articles for later use, and it also has location-based reminders available.</div></div>
+<div class="tool-card"><div class="tool-link"><a href="https://chromewebstore.google.com/detail/just-read/dgmanlpmmkibanfdgjocnabmcaclkmod?hl=en" target="_blank" rel="noopener">https://chromewebstore.google.com/detail/just-read/dgmanlpmmkibanfdgjocnabmcaclkmod?hl=en</a></div><div class="tool-desc">Just Read<br>The Just Read Extension is a customizable reader mode that removes ads, pop-ups, and distractions from web pages for a clean, focused reading experience. Unlike Mercury Reader, Just Read allows more customization, including changing fonts, colors, and removing specific elements.<br>Best for: Instructors reviewing articles, research papers, or web-based instructional materials without clutter. Also great for students who need a distraction-free reading experience.<br>Free Version: Basic reader mode with customization options.<br>Premium Version: Includes highlighting, annotation, saving &amp; sharing features, and auto-scroll functionality for long readings.</div></div>
+<div class="tool-card"><div class="tool-link"><a href="https://www.kamiapp.com/google/" target="_blank" rel="noopener">https://www.kamiapp.com/google/</a></div><div class="tool-desc">Kami<br>Kami is a PDF and document annotation tool with real-time collaboration. Free version supports highlighting, underlining, and commenting—useful for grading and group work.</div></div>
+<div class="tool-card"><div class="tool-link"><a href="https://knowt.com/chrome-extension" target="_blank" rel="noopener">https://knowt.com/chrome-extension</a></div><div class="tool-desc">Knowt<br>Knowt Chrome Extension 🔄 – An AI-powered tool that automatically generates flashcards and quizzes from websites, PDFs, and Google Docs while browsing. Allows users to highlight text and instantly create study materials without switching between apps.<br>Best for: Instructors who want to help students turn course materials into interactive review tools and students who prefer on-the-go learning and active recall practice.<br>Free Version: Basic flashcard and quiz generation, note-saving, and integration with Google Docs.<br>Premium Version: Advanced AI-generated summaries, spaced repetition features, and unlimited storage for study sets.</div></div>
+<div class="tool-card"><div class="tool-link"><a href="https://chromewebstore.google.com/detail/loom-%E2%80%93-screen-recorder-sc/liecbddmkiiihnedobmlmillhodjkdmb?hl=en-US" target="_blank" rel="noopener">https://chromewebstore.google.com/detail/loom-%E2%80%93-screen-recorder-sc/liecbddmkiiihnedobmlmillhodjkdmb?hl=en-US</a></div><div class="tool-desc">Loom<br>Loom lets you record &amp; share screen videos instantly! Loom is great for tutorials, lesson walkthroughs, or giving detailed assignment feedback.</div></div>
+<div class="tool-card"><div class="tool-link"><a href="https://chromewebstore.google.com/detail/mote-voice-audio-for-lear/ajphlblkfpppdpkgokiejbjfohfohhmk?hl=en-US" target="_blank" rel="noopener">https://chromewebstore.google.com/detail/mote-voice-audio-for-lear/ajphlblkfpppdpkgokiejbjfohfohhmk?hl=en-US</a></div><div class="tool-desc">Mote<br>A voice commenting and feedback extension that allows users to record and insert voice notes directly into Google Docs, Slides, Classroom, Gmail, and more. Saves time on typing and enhances accessibility for students.<br>Best for: Instructors who want to provide quick, personalized audio feedback on student work and students who prefer verbal explanations or need accessibility support.<br>Free Version: Up to 30 seconds per voice note, basic transcription, and integration with Google tools.<br>Premium Version: Unlimited voice recordings, advanced transcription, translation, and voice note embedding in more platforms.</div></div>
+<div class="tool-card"><div class="tool-link"><a href="https://chromewebstore.google.com/detail/onetab/chphlpgkkbolifaimnlloiipkdnihall?hl=en" target="_blank" rel="noopener">https://chromewebstore.google.com/detail/onetab/chphlpgkkbolifaimnlloiipkdnihall?hl=en</a></div><div class="tool-desc">OneTab<br>OneTab converts all open tabs into a single list, reducing memory usage and keeping research or lesson planning organized. Instructors can restore tabs when needed.</div></div>
+<div class="tool-card"><div class="tool-link"><a href="https://www.printfriendly.com/extensions/chrome" target="_blank" rel="noopener">https://www.printfriendly.com/extensions/chrome</a></div><div class="tool-desc">Print Friendly PDF<br>Converts web pages into clean, printable PDFs, removing ads and unnecessary elements. Ideal for archiving resources, printing handouts, or sharing cleaner articles with students.</div></div>
+<div class="tool-card"><div class="tool-link"><a href="https://chromewebstore.google.com/detail/read-aloud-a-text-to-spee/hdhinadidafjejdhmfkjgnolgimiaplp?hl=en" target="_blank" rel="noopener">Read Aloud Chrome Extension</a></div><div class="tool-desc">Read Aloud<br>The Read Aloud Chrome Extension uses text-to-speech (TTS) to read aloud web pages, PDFs, and Google Docs. It supports multiple voices and speeds, helping with accessibility and comprehension.<br>Best for: Instructors or students who prefer listening to content, need accessibility support, or want to review materials while multitasking.<br>Free Version: Basic TTS functionality with adjustable speeds.<br>Premium Version: Adds high-quality voices, multilingual support, and offline reading.</div></div>
+<div class="tool-card"><div class="tool-link"><a href="https://chromewebstore.google.com/detail/dipiagiiohfljcicegpgffpbnjmgjcnf?utm_source=item-share-cb" target="_blank" rel="noopener">Rememberry</a></div><div class="tool-desc">Rememberry<br>Rememberry is a language learning and vocabulary builder extension that translates words and phrases on any webpage and automatically adds them to a personalized flashcard system for review using spaced repetition.<br>Best for: Instructors and students learning new languages, building vocabulary, or needing quick translations while reading online.<br>Free Version: Basic translations, flashcard creation, and spaced repetition learning.<br>Premium Version: More advanced translations, additional languages, offline flashcards, and customizable review settings.</div></div>
+<div class="tool-card"><div class="tool-link"><a href="https://chromewebstore.google.com/detail/tango-create-how-to-guide/lggdbpblkekjjbobadliahffoaobaknh?hl=en-US" target="_blank" rel="noopener">Tango</a></div><div class="tool-desc">Tango<br>Tango automatically creates step-by-step guides as you perform tasks in your browser. Perfect for creating tutorials for faculty or students without extra effort.</div></div>
+<div class="tool-card"><div class="tool-link"><a href="https://chromewebstore.google.com/detail/mjdbhokoopacimoekfgkcoogikbfgngb?utm_source=item-share-cb" target="_blank" rel="noopener">Trancy</a></div><div class="tool-desc">Trancy<br>Trancy is a language learning and subtitle extension that provides dual subtitles, AI-generated transcripts, and instant translations for YouTube, Netflix, and other video platforms. Includes interactive vocabulary building and AI-assisted listening practice.<br>Best for:<br>Instructors and students learning new languages through immersion, with real-time translations, and subtitles.<br>Language learners who want AI-generated transcripts, pronunciation help, and vocabulary tracking.<br>Free Version: Basic dual subtitles, instant translations, and AI-generated transcripts for supported videos.<br>Premium Version: Enhanced subtitle customization, unlimited AI-generated transcripts, offline mode, and advanced listening practice tools.</div></div>
+<div class="tool-card"><div class="tool-link"><a href="https://chromewebstore.google.com/detail/turn-off-the-lights/bfbmjmiodbnnpllbbbfblcplfjjepjdn" target="_blank" rel="noopener">Turn Off the Lights</a></div><div class="tool-desc">Turn Off the Lights<br>Turn Off the Lights is a browser extension that dims the background of web pages and videos, creating a theater-like experience that reduces eye strain and distractions. Works on YouTube, Vimeo, and other video platforms.<br>Best for: Instructors and students who watch or present videos in class, reducing background clutter, and improving focus. Also helpful for night-time reading or those sensitive to bright screens.<br>Free Version: Full functionality, including auto-dimming, custom opacity, and night mode.<br>Premium Version: Additional customization options, scheduling features, and voice control integration.</div></div>
+<div class="tool-card"><div class="tool-link"><a href="https://chromewebstore.google.com/detail/wakelet/iomokcfebnfiflpgcpcijfkfmafgkjgh" target="_blank" rel="noopener">Wakelet</a></div><div class="tool-desc">Wakelet<br>Easily save web pages, articles, videos, and images directly to your Wakelet collections with one click. Ideal for organizing research, lesson plans, or instructional resources in a visually appealing, shareable format.<br>Best for: Instructors collecting and curating resources for lessons, sharing curated content with students, and organizing PD materials.<br>Free Version: Unlimited collections, collaboration with others, and direct saving from the web.<br>Premium Features: Wakelet is completely free! No premium tier required.</div></div>
+<div class="tool-card"><div class="tool-link"><a href="https://chromewebstore.google.com/detail/ailcmbgekjpnablpdkmaaccecekgdhlh?utm_source=item-share-cb" target="_blank" rel="noopener">Workona</a></div><div class="tool-desc">Workona<br>Workona is a tab and workspace organizer that helps users manage multiple projects, research sessions, and workflows by grouping tabs into custom workspaces. Allows easy switching between projects without losing progress.<br>Best for: Instructors and students juggling multiple research projects, lesson plans, or online coursework, keeping related tabs organized and reducing clutter.<br>Free Version: Up to 5 workspaces, unlimited tab management, and session saving.<br>Premium Version: Unlimited workspaces, automatic cloud backups, and advanced collaboration features.</div></div>
+</div>
+        </div>
+
+        <div class="tab-section" id="tab-google-tools">
+            <div class="section-intro">
+                <h2>Google's Extra Tools</h2>
+                <p>A collection of Google’s extra tools and sites that may surprise you!</p>
+            </div>
+            <div class="tool-grid">
+<div class="tool-card"><div class="tool-link"><a href="https://workspace.google.com/marketplace/app/doc_to_slides_by_alice_keeler/124753105563" target="_blank" rel="noopener">https://workspace.google.com/marketplace/app/doc_to_slides_by_alice_keeler/124753105563</a></div><div class="tool-desc">Docs to Slides<br>A Chrome extension to send the text from a Google Doc™ to a Google Slides™.</div></div>
+<div class="tool-card"><div class="tool-link"><a href="https://labs.google/gentype" target="_blank" rel="noopener">https://labs.google/gentype</a></div><div class="tool-desc">GenType<br>Create one-of-a-kind, AI-generated alphabets from any idea with GenType. </div></div>
+<div class="tool-card"><div class="tool-link"><a href="https://www.google.com/culturalinstitute/" target="_blank" rel="noopener">https://www.google.com/culturalinstitute/</a></div><div class="tool-desc">Google Arts &amp; Culture <br>Google Arts &amp; Culture is an online platform that provides access to cultural artifacts, art, and history from around the world. The platform uses technology to help preserve and share cultural treasures. Users can view, create, and share online collections! With AR and VR representations of art, famous sites, and museums from all over the world, the possibilities are amazing.</div></div>
+<div class="tool-card"><div class="tool-link"><a href="https://keep.google.com/" target="_blank" rel="noopener">https://keep.google.com/</a></div><div class="tool-desc">Google Keep <br>Google Keep is a Chrome app and mobile app that allows for quick note-taking. Notes can be color-coded and exported to Google Docs!</div></div>
+<div class="tool-card"><div class="tool-link"><a href="https://labs.google/" target="_blank" rel="noopener">https://labs.google/</a></div><div class="tool-desc">Google Labs <br>Google Labs is the home for Google’s AI Experiments.</div></div>
+<div class="tool-card"><div class="tool-link"><a href="https://books.google.com/ngrams" target="_blank" rel="noopener">https://books.google.com/ngrams</a></div><div class="tool-desc">Google Ngram<br>Examine the history and evolution of vocabulary and terminology in literature and recorded documents over time with Google Ngram.<br>Check out this short resource on <a href="https://guides.library.upenn.edu/penntdm/tools/ngram_viewer" target="_blank" rel="noopener">Getting Started with Google Ngram</a> from the University of Pennsylvania.</div></div>
+<div class="tool-card"><div class="tool-link"><a href="https://www.google.com/trends/?hl=en" target="_blank" rel="noopener">https://www.google.com/trends/?hl=en</a></div><div class="tool-desc">Google Trends <br>Google Trends allows you to see the topics people are—or aren’t—following, practically in real time. This tool will allow you to analyze statistics regarding Google search trends.<br>Want to see the “tv screen grid” of Google Trends in real-time? Click <a href="https://trends.google.com/tv/?rows=5&cols=5" target="_blank" rel="noopener">here</a>! One piece of advice--be careful with topics.  Some are for older audiences!!!)</div></div>
+<div class="tool-card"><div class="tool-link"><a href="https://docs.google.com/forms/d/1ZcIzxGjyu73vqUfl31FWWrK4pOzBRxxdMKuQNVH1Ws4/viewform?ts=672ce225&edit_requested=true" target="_blank" rel="noopener">https://docs.google.com/forms/d/1ZcIzxGjyu73vqUfl31FWWrK4pOzBRxxdMKuQNVH1Ws4/viewform?ts=672ce225&amp;edit_requested=true</a></div><div class="tool-desc">Google Trusted Tester Form<br>Interested in becoming a Google Trusted Tester? Fill out this form for a chance at selection!</div></div>
+<div class="tool-card"><div class="tool-link"><a href="https://trends.google.com/trends/hottrends/visualize" target="_blank" rel="noopener">https://trends.google.com/trends/hottrends/visualize</a></div><div class="tool-desc">Hot Trends<br>Curious as to what people are searching for on Google RIGHT NOW? Take a look at this! (Click the grid in the upper righthand corner to see the Hot Trends “TV screen.”)<br>(One piece of advice--be careful with topics. Some are for older audiences!!!)</div></div>
+<div class="tool-card"><div class="tool-link"><a href="https://illuminate.google.com/" target="_blank" rel="noopener">https://illuminate.google.com/</a></div><div class="tool-desc">Illuminate <br>Illuminate by Google is an experimental technology that uses AI to adapt web content to your learning preferences. After you provide a URL, Illuminate will attempt to generate an audio dialogue with two AI-generated voices discussing the key points of the content. Please be aware that Illuminate may not be able to process all web content, including paywalled material, sites that opt-out of AI indexing, and content flagged by our safety filters.</div></div>
+<div class="tool-card"><div class="tool-link"><a href="https://experiments.withgoogle.com/genius-mind" target="_blank" rel="noopener">https://experiments.withgoogle.com/genius-mind</a></div><div class="tool-desc">Inside a Genius Mind<br>Dive into Leonardo Da Vinci’s personal notebooks - his codices - exploring themes across time and subject matter with the help of machine learning. Try out “Inside a Genius Mind”!</div></div>
+<div class="tool-card"><div class="tool-link"><a href="https://learning.google.com/experiments/learn-about?src=signup" target="_blank" rel="noopener">https://learning.google.com/experiments/learn-about?src=signup</a></div><div class="tool-desc">Learn About<br>An easier way to “Learn About” new topics at your own pace using conversational AI and Google’s Learn About!</div></div>
+<div class="tool-card"><div class="tool-link"><a href="https://labs.google/fx/tools/music-fx-dj" target="_blank" rel="noopener">https://labs.google/fx/tools/music-fx-dj</a></div><div class="tool-desc">MusicFX DJ<br>MusicFX DJ is a generative AI tool that allows users to create music in real-time by inputting text prompts, mixing musical concepts, and steering the flow of a continuous stream of music. It's an AI-powered "jam session" where you are the conductor, allowing anyone to explore and create unique musical soundscapes. </div></div>
+<div class="tool-card"><div class="tool-link"><a href="https://experiments.withgoogle.com/musiclm-workshop" target="_blank" rel="noopener">https://experiments.withgoogle.com/musiclm-workshop</a></div><div class="tool-desc">Music LM Workshop<br>Describing a musical idea and hearing it come to life! Music LM Workshop is a new experimental AI tool that can turn text descriptions into music.</div></div>
+<div class="tool-card"><div class="tool-link"><a href="https://notebooklm.google/" target="_blank" rel="noopener">https://notebooklm.google/</a></div><div class="tool-desc">NotebookLM <br>NotebookLM from Google is an AI-powered collaborator that helps you do your best thinking. After uploading your documents, NotebookLM becomes an instant expert in those sources so you can read, take notes, and collaborate with it to refine and organize your ideas.</div></div>
+<div class="tool-card"><div class="tool-link"></div><div class="tool-desc">Paint with Music<br>Use Paint with Music to turn your paint brush into musical instruments and compose on sensorial canvases!</div></div>
+<div class="tool-card"><div class="tool-link"><a href="https://artsandculture.google.com/experiment/say-what-you-see/jwG3m7wQShZngw?cp&hl=en" target="_blank" rel="noopener">https://artsandculture.google.com/experiment/say-what-you-see/jwG3m7wQShZngw?cp&amp;hl=en</a></div><div class="tool-desc">Say What You See<br>Learn and practice the art of Image Prompting with these quick games and challenges from Say What You See.</div></div>
+<div class="tool-card"><div class="tool-link"><a href="https://g.co/arts/yqLSaXUxwd1LdfCP6" target="_blank" rel="noopener">https://g.co/arts/yqLSaXUxwd1LdfCP6</a></div><div class="tool-desc">Talking Tours <br>An AI audio experiment touring cultural landmarks in Street View on Google Arts &amp; Culture.</div></div>
+<div class="tool-card"><div class="tool-link"><a href="https://textfx.withgoogle.com/" target="_blank" rel="noopener">https://textfx.withgoogle.com/</a></div><div class="tool-desc">TextFX<br>With TextFX, you can enter a word and generate creative language possibilities. For rappers, writers, wordsmiths, and everyone in between.</div></div>
+<div class="tool-card"><div class="tool-link"><a href="https://labs.google/fx/tools/whisk" target="_blank" rel="noopener">https://labs.google/fx/tools/whisk</a></div><div class="tool-desc">Whisk<br>Use Whisk, a Google Experiment, to create a narrative with AI using images as prompts instead of text.</div></div>
+<div class="tool-card"><div class="tool-link"><a href="https://experiments.withgoogle.com/word-synth" target="_blank" rel="noopener">https://experiments.withgoogle.com/word-synth</a></div><div class="tool-desc">Word Synth<br>Word Synth is a fun way to play with speech and music!</div></div>
+</div>
+        </div>
+
+        <div class="tab-section" id="tab-learning">
+            <div class="section-intro">
+                <h2>Learning Activities: Quizzes, Tests, Classwork &amp; Homework</h2>
+                <p>These tools can be set up for automatic grading!  Don’t spend time grading multiple choice assignments. Use one of these tools instead!   (You can also use some of these tools to ask open-ended questions and then grade them one at a time!)</p>
+            </div>
+            <div class="tool-grid">
+<div class="tool-card"><div class="tool-link"><a href="https://answergarden.ch/" target="_blank" rel="noopener">https://answergarden.ch/</a></div><div class="tool-desc">Self-titled, "a minimalist feedback tool," Answer Garden doesn't collect student identifiers, but it allows students to enter short responses to prompts and watch as answers "grow" in size with repetition. Use it for real time audience participation, online brainstorming and classroom feedback.</div></div>
+<div class="tool-card"><div class="tool-link"><a href="https://www.commonlit.org/en" target="_blank" rel="noopener">https://www.commonlit.org/en</a></div><div class="tool-desc">Commonlit allows you to assign and grade within the platform. The CommonLit Digital Library contains thousands of free, supplemental texts, lessons, and quizzes in both English and Spanish. It’s fantastic for text analysis and comparison, and it’s free!</div></div>
+<div class="tool-card"><div class="tool-link"><a href="https://deck.toys/" target="_blank" rel="noopener">https://deck.toys/</a></div><div class="tool-desc">Decktoys is awesome! Use it to create digital “breakouts” and/or learning paths for students to follow. Build complete lessons within minutes with your existing teaching content such as study sets, PPT or Google Slides. It takes some time to set up, but the result is so cool! The AI-integration is fantastic!</div></div>
+<div class="tool-card"><div class="tool-link"><a href="https://teacher.desmos.com/" target="_blank" rel="noopener">https://teacher.desmos.com/</a></div><div class="tool-desc">Desmos is specifically dedicated to math engagement and real-world mathematics applications. Develop critical thinking along with math skills!</div></div>
+<div class="tool-card"><div class="tool-link"><a href="https://edpuzzle.com/" target="_blank" rel="noopener">https://edpuzzle.com/</a></div><div class="tool-desc">Engagement you can see, results you can measure. Empower students to take an active role in their learning with interactive video lessons that spark creativity and curiosity. Edpuzzle is the best way to make videos into lessons and learning assessments. You can add quiz questions, voiceover, and audio notes to any video! Now with AI-power!</div></div>
+<div class="tool-card"><div class="tool-link"><a href="https://www.figma.com/figjam/" target="_blank" rel="noopener">https://www.figma.com/figjam/</a></div><div class="tool-desc">Figjam is a collaborative online whiteboard to brainstorm and collaborate, all in one place.</div></div>
+<div class="tool-card"><div class="tool-link"><a href="https://goformative.com/" target="_blank" rel="noopener">https://goformative.com/</a></div><div class="tool-desc">Formative is a fantastic assessment platform that allows students to draw images, insert images, label pictures, and so much more! Formative enables you to transform a PDF or Google Doc into an auto-graded quiz without retyping the questions! Check it out. Now with AI-integration and a partnership with Newsela!</div></div>
+<div class="tool-card"><div class="tool-link"><a href="https://www.geogebra.org/" target="_blank" rel="noopener">https://www.geogebra.org/</a></div><div class="tool-desc">Geogebra is a free mathematics application for geometry, graphing, and more! GeoGebra is more than a set of free tools to do math. It’s a platform to connect enthusiastic teachers and students and offer them a new way to explore and learn about math.</div></div>
+<div class="tool-card"><div class="tool-link"><a href="https://insertlearning.com/" target="_blank" rel="noopener">https://insertlearning.com/</a></div><div class="tool-desc">Insert Learning keeps students engaged and active learners with interactive questions, discussions, videos, live annotations, and a collection of tools you can embed in lessons.</div></div>
+<div class="tool-card"><div class="tool-link"><a href="https://knowt.com/" target="_blank" rel="noopener">https://knowt.com/</a></div><div class="tool-desc">Knowt is the number one AI-powered alternative to Quizlet! It uses machine learning to automatically turn your notes into review quizzes. It’s super easy to bring over your existing Quizlets to Knowt and start studying them completely free in seconds. You can go through unlimited rounds of our free learn mode, matching game, spaced repetition or practice test mode. Plus, if you want, you can also create your own flashcards or have AI <a href="https://knowt.com/ai-video-summarizer" target="_blank" rel="noopener">make Flashcards from your lecture videos</a>, pdfs, notes, and more! If that's not for you, you can find millions of free flashcards made by other students at your fingertips. There’s a lot of great free study tools and resources to take advantage on Knowt that make it a great free quizlet alternative.</div></div>
+<div class="tool-card"><div class="tool-link"><a href="https://newsela.com/" target="_blank" rel="noopener">https://newsela.com/</a></div><div class="tool-desc">Newsela is a comprehension platform with premium features available. It pulls content from popular sites such as History.com and Smithsonian for learners at all levels. Put knowledge and relevant, real-world content at the center of skills practice to make literacy outcomes a reality for every learner.</div></div>
+<div class="tool-card"><div class="tool-link"><a href="https://www.socrative.com/" target="_blank" rel="noopener">https://www.socrative.com/</a></div><div class="tool-desc">Socrative helps you effortlessly assess and engage your students while visualizing learning progress in real-time with instant results. Consistent and user-friendly.</div></div>
+<div class="tool-card"><div class="tool-link"><a href="http://app.wizer.me/" target="_blank" rel="noopener">http://app.wizer.me/</a></div><div class="tool-desc">Choose Wizer to create and assign “smart worksheets!” Add video, audio, images and a variety of question types, all wrapped in a beautiful, engaging, &amp; easy to use app.</div></div>
+</div>
+        </div>
+
+        <div class="tab-section" id="tab-quizizz">
+            <div class="section-intro">
+                <h2>NEW! Quizizz Click&amp;Go PD</h2>
+                <p>Quick-access professional development sessions via Quizizz. Click a join link to start a live or self-paced session instantly. Visit <a href="https://quizizz.com/" target="_blank" rel="noopener">Quizizz.com</a> to browse all available sessions.</p>
+            </div>
+            <h3 class="subsection-head">For Teachers</h3>
+            <div class="table-wrap"><table class="qz-table">
+<tr>
+<th>Topic</th>
+<th></th>
+<th>Interactive Video</th>
+<th></th>
+<th>Interactive Slides</th>
+<th></th>
+<th>Gamified Quiz</th>
+<th></th>
+<th>Interactive Passage</th>
+<th>Request/<br>submit a topic or provide feedback</th>
+</tr>
+<tr>
+<td>Ed-Tech Platform</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Canva for Education</td>
+<td></td>
+<td><a href="https://quizizz.com/join?gc=16967700&&utm_source=community&utm_medium=PDgooglesheet&utm_term=defaultsheet" target="_blank" rel="noopener">Watch Video</a></td>
+<td></td>
+<td>Explore Slides</td>
+<td></td>
+<td><a href="https://quizizz.com/join?gc=59893780&&utm_source=community&utm_medium=PDgooglesheet&utm_term=defaultsheet" target="_blank" rel="noopener">Test your knowledge</a></td>
+<td></td>
+<td><a href="https://quizizz.com/join?gc=15460372&utm_source=community&utm_medium=PDgooglesheet&utm_term=defaultsheet" target="_blank" rel="noopener">Read about it</a></td>
+<td></td>
+</tr>
+<tr>
+<td>Quizizz</td>
+<td></td>
+<td><a href="https://quizizz.com/join?gc=08291752&&utm_source=community&utm_medium=PDgooglesheet&utm_term=defaultsheet" target="_blank" rel="noopener">Watch Video</a></td>
+<td></td>
+<td><a href="https://quizizz.com/join?gc=38673492&lng=en" target="_blank" rel="noopener">Explore Slides</a></td>
+<td></td>
+<td><a href="https://quizizz.com/join?gc=65111464&&utm_source=community&utm_medium=PDgooglesheet&utm_term=defaultsheet" target="_blank" rel="noopener">Test your knowledge</a></td>
+<td></td>
+<td><a href="https://quizizz.com/join?gc=07140776&&utm_source=community&utm_medium=PDgooglesheet&utm_term=defaultsheet" target="_blank" rel="noopener">Read about it</a></td>
+<td></td>
+</tr>
+<tr>
+<td>Book Creator</td>
+<td></td>
+<td><a href="https://quizizz.com/join?gc=21631972&&utm_source=community&utm_medium=PDgooglesheet&utm_term=defaultsheet" target="_blank" rel="noopener">Watch Video</a></td>
+<td></td>
+<td><a href="https://quizizz.com/join?gc=35197924&&utm_source=community&utm_medium=PDgooglesheet&utm_term=defaultsheet" target="_blank" rel="noopener">Explore Slides</a></td>
+<td></td>
+<td><a href="https://quizizz.com/join?gc=44372964&&utm_source=community&utm_medium=PDgooglesheet&utm_term=defaultsheet" target="_blank" rel="noopener">Test your knowledge</a></td>
+<td></td>
+<td><a href="https://quizizz.com/join?gc=13499236&utm_source=community&utm_medium=PDgooglesheet&utm_term=defaultsheet" target="_blank" rel="noopener">Read about it</a></td>
+<td></td>
+</tr>
+<tr>
+<td>Magic School</td>
+<td></td>
+<td><a href="https://quizizz.com/join?gc=18484648&&utm_source=community&utm_medium=PDgooglesheet&utm_term=defaultsheet" target="_blank" rel="noopener">Watch Video</a></td>
+<td></td>
+<td><a href="https://quizizz.com/join?gc=17175524&&utm_source=community&utm_medium=PDgooglesheet&utm_term=defaultsheet" target="_blank" rel="noopener">Explore Slides</a></td>
+<td></td>
+<td><a href="https://quizizz.com/join?gc=45610408&&utm_source=community&utm_medium=PDgooglesheet&utm_term=defaultsheet" target="_blank" rel="noopener">Test your knowledge</a></td>
+<td></td>
+<td><a href="https://quizizz.com/join?gc=51574184&&utm_source=community&utm_medium=PDgooglesheet&utm_term=defaultsheet" target="_blank" rel="noopener">Read about it</a></td>
+<td></td>
+</tr>
+<tr>
+<td>Brisk</td>
+<td></td>
+<td><a href="https://quizizz.com/join?gc=65018724&&utm_source=community&utm_medium=PDgooglesheet&utm_term=defaultsheet" target="_blank" rel="noopener">Watch Video</a></td>
+<td></td>
+<td><a href="https://quizizz.com/join?gc=40377188&&utm_source=community&utm_medium=PDgooglesheet&utm_term=defaultsheet" target="_blank" rel="noopener">Explore Slides</a></td>
+<td></td>
+<td><a href="https://quizizz.com/join?gc=23063396&&utm_source=community&utm_medium=PDgooglesheet&utm_term=defaultsheet" target="_blank" rel="noopener">Test your knowledge</a></td>
+<td></td>
+<td><a href="https://quizizz.com/join?gc=46398308&&utm_source=community&utm_medium=PDgooglesheet&utm_term=defaultsheet" target="_blank" rel="noopener">Read about it</a></td>
+<td></td>
+</tr>
+<tr>
+<td>Diffit</td>
+<td></td>
+<td><a href="https://quizizz.com/join?gc=64490920&&utm_source=community&utm_medium=PDgooglesheet&utm_term=defaultsheet" target="_blank" rel="noopener">Watch Video</a></td>
+<td></td>
+<td><a href="https://quizizz.com/join?gc=24835496&&utm_source=community&utm_medium=PDgooglesheet&utm_term=defaultsheet" target="_blank" rel="noopener">Explore Slides</a></td>
+<td></td>
+<td><a href="https://quizizz.com/join?gc=01832360&&utm_source=community&utm_medium=PDgooglesheet&utm_term=defaultsheet" target="_blank" rel="noopener">Test your knowledge</a></td>
+<td></td>
+<td><a href="https://quizizz.com/join?gc=533265868&&utm_source=community&utm_medium=PDgooglesheet&utm_term=defaultsheet" target="_blank" rel="noopener">Read about it</a></td>
+<td></td>
+</tr>
+<tr>
+<td>School AI</td>
+<td></td>
+<td><a href="https://quizizz.com/join?gc=15199076&&utm_source=community&utm_medium=PDgooglesheet&utm_term=defaultsheet" target="_blank" rel="noopener">Watch Video</a></td>
+<td></td>
+<td><a href="https://quizizz.com/join?gc=45544872&&utm_source=community&utm_medium=PDgooglesheet&utm_term=defaultsheet" target="_blank" rel="noopener">Explore Slides</a></td>
+<td></td>
+<td><a href="https://quizizz.com/join?gc=42199908&&utm_source=community&utm_medium=PDgooglesheet&utm_term=defaultsheet" target="_blank" rel="noopener">Test your knowledge</a></td>
+<td></td>
+<td><a href="https://quizizz.com/join?gc=27126628&&utm_source=community&utm_medium=PDgooglesheet&utm_term=defaultsheet" target="_blank" rel="noopener">Read about it</a></td>
+<td></td>
+</tr>
+<tr>
+<td>Snorkl</td>
+<td></td>
+<td><a href="https://quizizz.com/join?gc=57937320&&utm_source=community&utm_medium=PDgooglesheet&utm_term=defaultsheet" target="_blank" rel="noopener">Watch Video</a></td>
+<td></td>
+<td><a href="https://quizizz.com/join?gc=47117736&&utm_source=community&utm_medium=PDgooglesheet&utm_term=defaultsheet" target="_blank" rel="noopener">Explore Slides</a></td>
+<td></td>
+<td><a href="https://quizizz.com/join?gc=43117412&&utm_source=community&utm_medium=PDgooglesheet&utm_term=defaultsheet" target="_blank" rel="noopener">Test your knowledge</a></td>
+<td></td>
+<td><a href="https://quizizz.com/join?gc=10087268&&utm_source=community&utm_medium=PDgooglesheet&utm_term=defaultsheet" target="_blank" rel="noopener">Read about it</a></td>
+<td></td>
+</tr>
+<tr>
+<td>Pedagogy</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>AI's Plate: 10 Best Prompts</td>
+<td></td>
+<td><a href="https://quizizz.com/join?gc=35437412&&utm_source=community&utm_medium=PDgooglesheet&utm_term=defaultsheet" target="_blank" rel="noopener">Watch Video</a></td>
+<td></td>
+<td><a href="https://quizizz.com/join?gc=25115492&&utm_source=community&utm_medium=PDgooglesheet&utm_term=defaultsheet" target="_blank" rel="noopener">Explore Slides</a></td>
+<td></td>
+<td><a href="https://quizizz.com/join?gc=29670244&&utm_source=community&utm_medium=PDgooglesheet&utm_term=defaultsheet" target="_blank" rel="noopener">Test your knowledge</a></td>
+<td></td>
+<td><a href="https://quizizz.com/join?gc=66239332&&utm_source=community&utm_medium=PDgooglesheet&utm_term=defaultsheet" target="_blank" rel="noopener">Read about it</a></td>
+<td></td>
+</tr>
+<tr>
+<td>Canvas for the Secondary Classroom</td>
+<td></td>
+<td><a href="https://quizizz.com/join?gc=46340964&&utm_source=community&utm_medium=PDgooglesheet&utm_term=defaultsheet" target="_blank" rel="noopener">Watch Video</a></td>
+<td></td>
+<td><a href="https://quizizz.com/join?gc=50535268&&utm_source=community&utm_medium=PDgooglesheet&utm_term=defaultsheet" target="_blank" rel="noopener">Explore Slides</a></td>
+<td></td>
+<td><a href="https://quizizz.com/join?gc=52632420&&utm_source=community&utm_medium=PDgooglesheet&utm_term=defaultsheet" target="_blank" rel="noopener">Test your knowledge</a></td>
+<td></td>
+<td><a href="https://quizizz.com/join?gc=56826724&&utm_source=community&utm_medium=PDgooglesheet&utm_term=defaultsheet" target="_blank" rel="noopener">Read about it</a></td>
+<td></td>
+</tr>
+<tr>
+<td>Chromebook Accessibility</td>
+<td></td>
+<td><a href="https://quizizz.com/join?gc=63748964&&utm_source=community&utm_medium=PDgooglesheet&utm_term=defaultsheet" target="_blank" rel="noopener">Watch Video</a></td>
+<td></td>
+<td><a href="https://quizizz.com/join?gc=23018340&&utm_source=community&utm_medium=PDgooglesheet&utm_term=defaultsheet" target="_blank" rel="noopener">Explore Slides</a></td>
+<td></td>
+<td><a href="https://quizizz.com/join?gc=33078116&&utm_source=community&utm_medium=PDgooglesheet&utm_term=defaultsheet" target="_blank" rel="noopener">Test your knowledge</a></td>
+<td></td>
+<td><a href="https://quizizz.com/join?gc=36879204&&utm_source=community&utm_medium=PDgooglesheet&utm_term=defaultsheet" target="_blank" rel="noopener">Read about it</a></td>
+<td></td>
+</tr>
+<tr>
+<td>Deeper Learning (4 Shifts)</td>
+<td></td>
+<td><a href="https://quizizz.com/join?gc=27048804&&utm_source=community&utm_medium=PDgooglesheet&utm_term=defaultsheet" target="_blank" rel="noopener">Watch Video</a></td>
+<td></td>
+<td><a href="https://quizizz.com/join?gc=67058532&&utm_source=community&utm_medium=PDgooglesheet&utm_term=defaultsheet" target="_blank" rel="noopener">Explore Slides</a></td>
+<td></td>
+<td><a href="https://quizizz.com/join?gc=35961700&&utm_source=community&utm_medium=PDgooglesheet&utm_term=defaultsheet" target="_blank" rel="noopener">Test your knowledge</a></td>
+<td></td>
+<td><a href="https://quizizz.com/join?gc=09091940&&utm_source=community&utm_medium=PDgooglesheet&utm_term=defaultsheet" target="_blank" rel="noopener">Read about it</a></td>
+<td></td>
+</tr>
+<tr>
+<td>Differentiation</td>
+<td></td>
+<td><a href="https://quizizz.com/join?gc=16038756&&utm_source=community&utm_medium=PDgooglesheet&utm_term=defaultsheet" target="_blank" rel="noopener">Watch Video</a></td>
+<td></td>
+<td><a href="https://quizizz.com/join?gc=51395428&&utm_source=community&utm_medium=PDgooglesheet&utm_term=defaultsheet" target="_blank" rel="noopener">Explore Slides</a></td>
+<td></td>
+<td><a href="https://quizizz.com/join?gc=03717988&&utm_source=community&utm_medium=PDgooglesheet&utm_term=defaultsheet" target="_blank" rel="noopener">Test your knowledge</a></td>
+<td></td>
+<td><a href="https://quizizz.com/join?gc=46316388" target="_blank" rel="noopener">Read about it</a></td>
+<td></td>
+</tr>
+<tr>
+<td>Digital Citizenship</td>
+<td></td>
+<td><a href="https://quizizz.com/join?gc=18684772&&utm_source=community&utm_medium=PDgooglesheet&utm_term=defaultsheet" target="_blank" rel="noopener">Watch Video</a></td>
+<td></td>
+<td><a href="https://quizizz.com/join?gc=57482084&&utm_source=community&utm_medium=PDgooglesheet&utm_term=defaultsheet" target="_blank" rel="noopener">Explore Slides</a></td>
+<td></td>
+<td><a href="https://quizizz.com/join?gc=39656292&&utm_source=community&utm_medium=PDgooglesheet&utm_term=defaultsheet" target="_blank" rel="noopener">Test your knowledge</a></td>
+<td></td>
+<td><a href="https://quizizz.com/join?gc=50142052&&utm_source=community&utm_medium=PDgooglesheet&utm_term=defaultsheet" target="_blank" rel="noopener">Read about it</a></td>
+<td></td>
+</tr>
+<tr>
+<td>Google Certification Level 1 Exam</td>
+<td></td>
+<td><a href="https://quizizz.com/join?gc=39000932&&utm_source=community&utm_medium=PDgooglesheet&utm_term=defaultsheet" target="_blank" rel="noopener">Watch Video</a></td>
+<td></td>
+<td><a href="https://quizizz.com/join?gc=09640804&&utm_source=community&utm_medium=PDgooglesheet&utm_term=defaultsheet" target="_blank" rel="noopener">Explore Slides</a></td>
+<td></td>
+<td><a href="https://quizizz.com/join?gc=26647396&&utm_source=community&utm_medium=PDgooglesheet&utm_term=defaultsheet" target="_blank" rel="noopener">Test your knowledge</a></td>
+<td></td>
+<td><a href="https://quizizz.com/join?gc=01227620&&utm_source=community&utm_medium=PDgooglesheet&utm_term=defaultsheet" target="_blank" rel="noopener">Read about it</a></td>
+<td></td>
+</tr>
+<tr>
+<td>Hidden Google Classroom</td>
+<td></td>
+<td><a href="https://quizizz.com/join?gc=55360356&&utm_source=community&utm_medium=PDgooglesheet&utm_term=defaultsheet" target="_blank" rel="noopener">Watch Video</a></td>
+<td></td>
+<td><a href="https://quizizz.com/join?gc=07289700&&utm_source=community&utm_medium=PDgooglesheet&utm_term=defaultsheet" target="_blank" rel="noopener">Explore Slides</a></td>
+<td></td>
+<td><a href="https://quizizz.com/join?gc=54049636&&utm_source=community&utm_medium=PDgooglesheet&utm_term=defaultsheet" target="_blank" rel="noopener">Test your knowledge</a></td>
+<td></td>
+<td><a href="https://quizizz.com/join?gc=64142180&&utm_source=community&utm_medium=PDgooglesheet&utm_term=defaultsheet" target="_blank" rel="noopener">Read about it</a></td>
+<td></td>
+</tr>
+<tr>
+<td>Improving Feedback</td>
+<td></td>
+<td><a href="https://quizizz.com/join?gc=40680292&&utm_source=community&utm_medium=PDgooglesheet&utm_term=defaultsheet" target="_blank" rel="noopener">Watch Video</a></td>
+<td></td>
+<td><a href="https://quizizz.com/join?gc=64961380&&utm_source=community&utm_medium=PDgooglesheet&utm_term=defaultsheet" target="_blank" rel="noopener">Explore Slides</a></td>
+<td></td>
+<td><a href="https://quizizz.com/join?gc=33864548&&utm_source=community&utm_medium=PDgooglesheet&utm_term=defaultsheet" target="_blank" rel="noopener">Test your knowledge</a></td>
+<td></td>
+<td><a href="https://quizizz.com/join?gc=41073508&&utm_source=community&utm_medium=PDgooglesheet&utm_term=defaultsheet" target="_blank" rel="noopener">Read about it</a></td>
+<td></td>
+</tr>
+<tr>
+<td>Strategies for Working with Newcomer Emergent Bilingual Students</td>
+<td></td>
+<td><a href="https://quizizz.com/join?gc=47201124&&utm_source=community&utm_medium=PDgooglesheet&utm_term=defaultsheet" target="_blank" rel="noopener">Watch Video</a></td>
+<td></td>
+<td><a href="https://quizizz.com/join?gc=06724452&&utm_source=community&utm_medium=PDgooglesheet&utm_term=defaultsheet" target="_blank" rel="noopener">Explore Slides</a></td>
+<td></td>
+<td><a href="https://quizizz.com/join?gc=14203748&&utm_source=community&utm_medium=PDgooglesheet&utm_term=defaultsheet" target="_blank" rel="noopener">Test your knowledge</a></td>
+<td></td>
+<td><a href="https://quizizz.com/join?gc=22199140&&utm_source=community&utm_medium=PDgooglesheet&utm_term=defaultsheet" target="_blank" rel="noopener">Read about it</a></td>
+<td></td>
+</tr>
+</table></div>
+            <h3 class="subsection-head">For Coaches / Trainers</h3>
+            <div class="table-wrap"><table class="qz-table">
+<tr>
+<th>Topic</th>
+<th></th>
+<th>Interactive Video</th>
+<th></th>
+<th>Interactive Slides</th>
+<th></th>
+<th>Gamified Quiz</th>
+<th></th>
+<th>Interactive Passage</th>
+<th>Request/<br>submit a topic or provide feedback</th>
+</tr>
+<tr>
+<td>Ed-Tech Platform</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Quizizz</td>
+<td></td>
+<td><a href="https://quizizz.com/admin/quiz/67b4f36534a4e652d5d2f094?utm_source=community&utm_medium=PDgooglesheet&utm_term=defaultsheet" target="_blank" rel="noopener">Assign or Modify</a></td>
+<td></td>
+<td><a href="https://quizizz.com/admin/presentation/66bddc40f4b33d1ad3c8dae9?utm_source=community&utm_medium=PDgooglesheet&utm_term=defaultsheet" target="_blank" rel="noopener">Assign or Modify</a></td>
+<td></td>
+<td><a href="https://quizizz.com/admin/quiz/62ff8a3825c84b001e5fa5b1?utm_source=community&utm_medium=PDgooglesheet&utm_term=defaultsheet" target="_blank" rel="noopener">Assign or Modify</a></td>
+<td></td>
+<td><a href="https://quizizz.com/admin/quiz/67b53434c0effbdc6bd7e8e7?utm_source=community&utm_medium=PDgooglesheet&utm_term=defaultsheet" target="_blank" rel="noopener">Assign or Modify</a></td>
+<td></td>
+</tr>
+<tr>
+<td>Book Creator</td>
+<td></td>
+<td><a href="https://quizizz.com/admin/quiz/66ec10895e3e247cbb7cec9f?utm_source=community&utm_medium=PDgooglesheet&utm_term=defaultsheet" target="_blank" rel="noopener">Assign or Modify</a></td>
+<td></td>
+<td><a href="https://quizizz.com/admin/lesson/67cb3dcec9f48eb25b234234?utm_source=community&utm_medium=PDgooglesheet&utm_term=defaultsheet" target="_blank" rel="noopener">Assign or Modify</a></td>
+<td></td>
+<td><a href="https://quizizz.com/admin/assessment/67cb4288eccf53a07e810b48?utm_source=community&utm_medium=PDgooglesheet&utm_term=defaultsheet" target="_blank" rel="noopener">Assign or Modify</a></td>
+<td></td>
+<td><a href="https://quizizz.com/admin/passage/67d817dba0f551ef90d7aa58?utm_source=community&utm_medium=PDgooglesheet&utm_term=defaultsheet" target="_blank" rel="noopener">Assign or Modify</a></td>
+<td></td>
+</tr>
+<tr>
+<td>Canva for Education</td>
+<td></td>
+<td><a href="https://quizizz.com/admin/quiz/680922306df8bdba9d3f8e72?utm_source=community&utm_medium=PDgooglesheet&utm_term=defaultsheet" target="_blank" rel="noopener">Assign or Modify</a></td>
+<td></td>
+<td>Assign or Modify</td>
+<td></td>
+<td><a href="https://quizizz.com/admin/quiz/680923382e68bf27074c8497?aiQuizGen=true&fromStreaming=true&aiQuizPublished=true?utm_source=community&utm_medium=PDgooglesheet&utm_term=defaultsheet" target="_blank" rel="noopener">Assign or Modify</a></td>
+<td></td>
+<td><a href="https://quizizz.com/admin/quiz/680923745535a9d22fe0894b?utm_source=community&utm_medium=PDgooglesheet&utm_term=defaultsheet" target="_blank" rel="noopener">Assign or Modify</a></td>
+<td></td>
+</tr>
+<tr>
+<td>Magic School</td>
+<td></td>
+<td><a href="https://quizizz.com/admin/quiz/66f7c72ee971deacdf975dd6?utm_source=community&utm_medium=PDgooglesheet&utm_term=defaultsheet" target="_blank" rel="noopener">Assign or Modify</a></td>
+<td></td>
+<td><a href="https://quizizz.com/admin/presentation/66bdf55cc231b95a32bc9034?utm_source=community&utm_medium=PDgooglesheet&utm_term=defaultsheet" target="_blank" rel="noopener">Assign or Modify</a></td>
+<td></td>
+<td><a href="https://quizizz.com/admin/quiz/67b53e1cd1789389583d4a74?utm_source=community&utm_medium=PDgooglesheet&utm_term=defaultsheet" target="_blank" rel="noopener">Assign or Modify</a></td>
+<td></td>
+<td><a href="https://quizizz.com/admin/quiz/67b533f4ee23050b0912d9e1?utm_source=community&utm_medium=PDgooglesheet&utm_term=defaultsheet" target="_blank" rel="noopener">Assign or Modify</a></td>
+<td></td>
+</tr>
+<tr>
+<td>Brisk</td>
+<td></td>
+<td><a href="https://quizizz.com/admin/interactive-video/66ec14cb5e3e246a637ceec6?utm_source=community&utm_medium=PDgooglesheet&utm_term=defaultsheet" target="_blank" rel="noopener">Assign or Modify</a></td>
+<td></td>
+<td><a href="https://quizizz.com/admin/presentation/652e730f4231d48db0657087/enhancing-instruction-with-brisk?utm_source=community&utm_medium=PDgooglesheet&utm_term=defaultsheet" target="_blank" rel="noopener">Assign or Modify</a></td>
+<td></td>
+<td><a href="https://quizizz.com/admin/quiz/6802937e1c7d1ba550497a4a?utm_source=community&utm_medium=PDgooglesheet&utm_term=defaultsheet" target="_blank" rel="noopener">Assign or Modify</a></td>
+<td></td>
+<td><a href="https://quizizz.com/admin/quiz/6802936f1c7d1ba550497a48?utm_source=community&utm_medium=PDgooglesheet&utm_term=defaultsheet" target="_blank" rel="noopener">Assign or Modify</a></td>
+<td></td>
+</tr>
+<tr>
+<td>Diffit</td>
+<td></td>
+<td><a href="https://quizizz.com/admin/quiz/66f9f43151dafa734a0cac7c?utm_source=community&utm_medium=PDgooglesheet&utm_term=defaultsheet" target="_blank" rel="noopener">Assign or Modify</a></td>
+<td></td>
+<td><a href="https://quizizz.com/admin/presentation/66a8e4b3ef5cff622e16e018?utm_source=community&utm_medium=PDgooglesheet&utm_term=defaultsheet" target="_blank" rel="noopener">Assign or Modify</a></td>
+<td></td>
+<td><a href="https://quizizz.com/admin/quiz/67b53db5052da6c3a4da9981?utm_source=community&utm_medium=PDgooglesheet&utm_term=defaultsheet" target="_blank" rel="noopener">Assign or Modify</a></td>
+<td></td>
+<td><a href="https://quizizz.com/admin/quiz/67b533265868d11fc4562405?utm_source=community&utm_medium=PDgooglesheet&utm_term=defaultsheet" target="_blank" rel="noopener">Assign or Modify</a></td>
+<td></td>
+</tr>
+<tr>
+<td>School AI</td>
+<td></td>
+<td><a href="https://quizizz.com/admin/quiz/680292206f02c34ee314e6ec?utm_source=community&utm_medium=PDgooglesheet&utm_term=defaultsheet" target="_blank" rel="noopener">Assign or Modify</a></td>
+<td></td>
+<td><a href="https://quizizz.com/admin/presentation/66bf46d73a1a345f64fd3bb9?utm_source=community&utm_medium=PDgooglesheet&utm_term=defaultsheet" target="_blank" rel="noopener">Assign or Modify</a></td>
+<td></td>
+<td><a href="https://quizizz.com/admin/quiz/680290cf3b162e4a3846fc21?utm_source=community&utm_medium=PDgooglesheet&utm_term=defaultsheet" target="_blank" rel="noopener">Assign or Modify</a></td>
+<td></td>
+<td><a href="https://quizizz.com/admin/quiz/6802906446989c17f1087a45?utm_source=community&utm_medium=PDgooglesheet&utm_term=defaultsheet" target="_blank" rel="noopener">Assign or Modify</a></td>
+<td></td>
+</tr>
+<tr>
+<td>Snorkl</td>
+<td></td>
+<td><a href="https://quizizz.com/admin/quiz/67058bd2ac15ad6ca5d84f1a?utm_source=community&utm_medium=PDgooglesheet&utm_term=defaultsheet" target="_blank" rel="noopener">Assign or Modify</a></td>
+<td></td>
+<td><a href="https://quizizz.com/admin/presentation/66bf6a38d79024e308aac355?utm_source=community&utm_medium=PDgooglesheet&utm_term=defaultsheet?utm_source=community&utm_medium=PDgooglesheet&utm_term=defaultsheet" target="_blank" rel="noopener">Assign or Modify</a></td>
+<td></td>
+<td><a href="https://quizizz.com/admin/quiz/68028f524ef02489b80e021d?utm_source=community&utm_medium=PDgooglesheet&utm_term=defaultsheet" target="_blank" rel="noopener">Assign or Modify</a></td>
+<td></td>
+<td><a href="https://quizizz.com/admin/quiz/68028fc96b7dc30026b96f13?utm_source=community&utm_medium=PDgooglesheet&utm_term=defaultsheet" target="_blank" rel="noopener">Assign or Modify</a></td>
+<td></td>
+</tr>
+<tr>
+<td>Pedagogy</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>AI's Plate: 10 Best Prompts</td>
+<td></td>
+<td><a href="https://quizizz.com/admin/interactive%20video/67c785396299593a68555d18?utm_source=community&utm_medium=PDgooglesheet&utm_term=defaultsheet" target="_blank" rel="noopener">Assign or Modify</a></td>
+<td></td>
+<td><a href="https://quizizz.com/admin/lesson/67c7876ffd0368ab93517b11??utm_source=community&utm_medium=PDgooglesheet&utm_term=defaultsheet" target="_blank" rel="noopener">Assign or Modify</a></td>
+<td></td>
+<td><a href="https://quizizz.com/admin/assessment/67c4e723440e7164095c1602?utm_source=community&utm_medium=PDgooglesheet&utm_term=defaultsheet" target="_blank" rel="noopener">Assign or Modify</a></td>
+<td></td>
+<td><a href="https://quizizz.com/admin/passage/67c4e55d5171707a8b6f75ac?utm_source=community&utm_medium=PDgooglesheet&utm_term=defaultsheet" target="_blank" rel="noopener">Assign or Modify</a></td>
+<td></td>
+</tr>
+<tr>
+<td>Canvas for the Secondary Classroom</td>
+<td></td>
+<td><a href="https://quizizz.com/admin/quiz/66fa07bf052c4fd2bbe4d3eb?utm_source=community&utm_medium=PDgooglesheet&utm_term=defaultsheet" target="_blank" rel="noopener">Assign or Modify</a></td>
+<td></td>
+<td><a href="https://quizizz.com/admin/presentation/67c4cba9a0509bfd9442a98d?utm_source=community&utm_medium=PDgooglesheet&utm_term=defaultsheet" target="_blank" rel="noopener">Assign or Modify</a></td>
+<td></td>
+<td><a href="https://quizizz.com/admin/quiz/67c6578152a1b25fa892f937?utm_source=community&utm_medium=PDgooglesheet&utm_term=defaultsheet" target="_blank" rel="noopener">Assign or Modify</a></td>
+<td></td>
+<td><a href="https://quizizz.com/admin/quiz/67c657e1db2d3745567b2278?utm_source=community&utm_medium=PDgooglesheet&utm_term=defaultsheet" target="_blank" rel="noopener">Assign or Modify</a></td>
+<td></td>
+</tr>
+<tr>
+<td>Chromebook Accessibility</td>
+<td></td>
+<td><a href="https://quizizz.com/admin/interactive%20video/67c4d5982cc2f9f3308d9662?utm_source=community&utm_medium=PDgooglesheet&utm_term=defaultsheet" target="_blank" rel="noopener">Assign or Modify</a></td>
+<td></td>
+<td><a href="https://quizizz.com/admin/lesson/67c4dd1367c439e3c79ec744?utm_source=community&utm_medium=PDgooglesheet&utm_term=defaultsheet" target="_blank" rel="noopener">Assign or Modify</a></td>
+<td></td>
+<td><a href="https://quizizz.com/admin/assessment/67c4da472cc2f9f3308d9742?utm_source=community&utm_medium=PDgooglesheet&utm_term=defaultsheet" target="_blank" rel="noopener">Assign or Modify</a></td>
+<td></td>
+<td><a href="https://quizizz.com/admin/passage/67c4d8d27485e075a2165e0f?utm_source=community&utm_medium=PDgooglesheet&utm_term=defaultsheet" target="_blank" rel="noopener">Assign or Modify</a></td>
+<td></td>
+</tr>
+<tr>
+<td>Deeper Learning (4 Shifts)</td>
+<td></td>
+<td><a href="https://quizizz.com/admin/interactive%20video/67c4e8582d6d82eeb5a11d74?utm_source=community&utm_medium=PDgooglesheet&utm_term=defaultsheet" target="_blank" rel="noopener">Assign or Modify</a></td>
+<td></td>
+<td><a href="https://quizizz.com/admin/lesson/67c78bc23c6d10bdc9aba5be?utm_source=community&utm_medium=PDgooglesheet&utm_term=defaultsheet" target="_blank" rel="noopener">Assign or Modify</a></td>
+<td></td>
+<td><a href="https://quizizz.com/admin/assessment/67c4e1d5440e7164095c14dd?utm_source=community&utm_medium=PDgooglesheet&utm_term=defaultsheet" target="_blank" rel="noopener">Assign or Modify</a></td>
+<td></td>
+<td><a href="https://quizizz.com/admin/passage/67c4e0db687aa7fd4811f5bb?utm_source=community&utm_medium=PDgooglesheet&utm_term=defaultsheet" target="_blank" rel="noopener">Assign or Modify</a></td>
+<td></td>
+</tr>
+<tr>
+<td>Differentiation</td>
+<td></td>
+<td><a href="https://quizizz.com/admin/quiz/66f7f406628dacc9ac4922a7?utm_source=community&utm_medium=PDgooglesheet&utm_term=defaultsheet" target="_blank" rel="noopener">Assign or Modify</a></td>
+<td></td>
+<td><a href="https://quizizz.com/admin/presentation/67ccb6e255fc6ea5445b9cd9?utm_source=community&utm_medium=PDgooglesheet&utm_term=defaultsheet" target="_blank" rel="noopener">Assign or Modify</a></td>
+<td></td>
+<td><a href="https://quizizz.com/admin/quiz/67ccba59dc991abc1f580470?utm_source=community&utm_medium=PDgooglesheet&utm_term=defaultsheet" target="_blank" rel="noopener">Assign or Modify</a></td>
+<td></td>
+<td><a href="https://quizizz.com/admin/quiz/67ccba71b1b966b1f4ed7f59?utm_source=community&utm_medium=PDgooglesheet&utm_term=defaultsheet" target="_blank" rel="noopener">Assign or Modify</a></td>
+<td></td>
+</tr>
+<tr>
+<td>Digital Citizenship</td>
+<td></td>
+<td><a href="https://quizizz.com/admin/quiz/66ea9f256a6efd04666dc987?utm_source=community&utm_medium=PDgooglesheet&utm_term=defaultsheet" target="_blank" rel="noopener">Assign or Modify</a></td>
+<td></td>
+<td><a href="https://quizizz.com/admin/presentation/67ba41a8a6a82942920c8770?utm_source=community&utm_medium=PDgooglesheet&utm_term=defaultsheet" target="_blank" rel="noopener">Assign or Modify</a></td>
+<td></td>
+<td><a href="https://quizizz.com/admin/quiz/67ba40f04152521e27e2d61c?utm_source=community&utm_medium=PDgooglesheet&utm_term=defaultsheet" target="_blank" rel="noopener">Assign or Modify</a></td>
+<td></td>
+<td><a href="https://quizizz.com/admin/quiz/67ba46c1ae2517f68f0e7189?utm_source=community&utm_medium=PDgooglesheet&utm_term=defaultsheet" target="_blank" rel="noopener">Assign or Modify</a></td>
+<td></td>
+</tr>
+<tr>
+<td>Google Certification Level 1 Exam</td>
+<td></td>
+<td><a href="https://quizizz.com/admin/quiz/67c8fb9e87d01a2bf9c05600?utm_source=community&utm_medium=PDgooglesheet&utm_term=defaultsheet" target="_blank" rel="noopener">Assign or Modify</a></td>
+<td></td>
+<td><a href="https://quizizz.com/admin/quiz/67c8ff7856cdfb183546405e?utm_source=community&utm_medium=PDgooglesheet&utm_term=defaultsheet" target="_blank" rel="noopener">Assign or Modify</a></td>
+<td></td>
+<td><a href="https://quizizz.com/admin/quiz/67c902f376c36b10b4d16c57?utm_source=community&utm_medium=PDgooglesheet&utm_term=defaultsheet" target="_blank" rel="noopener">Assign or Modify</a></td>
+<td></td>
+<td><a href="https://quizizz.com/admin/quiz/67c8fff2d186747d914be22f?utm_source=community&utm_medium=PDgooglesheet&utm_term=defaultsheet" target="_blank" rel="noopener">Assign or Modify</a></td>
+<td></td>
+</tr>
+<tr>
+<td>Hidden Google Classroom</td>
+<td></td>
+<td><a href="https://quizizz.com/admin/interactive%20video/67c77e2acb499fae1356c98d?utm_source=community&utm_medium=PDgooglesheet&utm_term=defaultsheet" target="_blank" rel="noopener">Assign or Modify</a></td>
+<td></td>
+<td><a href="https://quizizz.com/admin/lesson/67c77faab8a178e80bfeb396?utm_source=community&utm_medium=PDgooglesheet&utm_term=defaultsheet" target="_blank" rel="noopener">Assign or Modify</a></td>
+<td></td>
+<td><a href="https://quizizz.com/admin/assessment/67c4e22eb8a178e80bfd3257?utm_source=community&utm_medium=PDgooglesheet&utm_term=defaultsheet" target="_blank" rel="noopener">Assign or Modify</a></td>
+<td></td>
+<td><a href="https://quizizz.com/admin/passage/67c4dfb224abe215c1e3a917?utm_source=community&utm_medium=PDgooglesheet&utm_term=defaultsheet" target="_blank" rel="noopener">Assign or Modify</a></td>
+<td></td>
+</tr>
+<tr>
+<td>Improving Feedback</td>
+<td></td>
+<td><a href="https://quizizz.com/admin/interactive%20video/67c7732df3dfecbca484bccc?utm_source=community&utm_medium=PDgooglesheet&utm_term=defaultsheet" target="_blank" rel="noopener">Assign or Modify</a></td>
+<td></td>
+<td><a href="https://quizizz.com/admin/lesson/67c777a46c4b1ba37b78edac?utm_source=community&utm_medium=PDgooglesheet&utm_term=defaultsheet" target="_blank" rel="noopener">Assign or Modify</a></td>
+<td></td>
+<td><a href="https://quizizz.com/admin/assessment/67c7774a23cca0ecb6fb66c3?utm_source=community&utm_medium=PDgooglesheet&utm_term=defaultsheet" target="_blank" rel="noopener">Assign or Modify</a></td>
+<td></td>
+<td><a href="https://quizizz.com/admin/passage/67c4dc8285dd352cd29301e9?utm_source=community&utm_medium=PDgooglesheet&utm_term=defaultsheet" target="_blank" rel="noopener">Assign or Modify</a></td>
+<td></td>
+</tr>
+<tr>
+<td>Strategies for Working with Newcomer Emergent Bilingual Students</td>
+<td></td>
+<td><a href="https://quizizz.com/admin/quiz/67cb9acc55fc6ea5445b5441?utm_source=community&utm_medium=PDgooglesheet&utm_term=defaultsheet" target="_blank" rel="noopener">Assign or Modify</a></td>
+<td></td>
+<td><a href="https://quizizz.com/admin/presentation/67cb9e45ad73cf71853e3303?utm_source=community&utm_medium=PDgooglesheet&utm_term=defaultsheet" target="_blank" rel="noopener">Assign or Modify</a></td>
+<td></td>
+<td><a href="https://quizizz.com/admin/quiz/67cb9869db2a19f07bd505a4?utm_source=community&utm_medium=PDgooglesheet&utm_term=defaultsheet" target="_blank" rel="noopener">Assign or Modify</a></td>
+<td></td>
+<td><a href="https://quizizz.com/admin/quiz/67cb9a2e691b813e074f3aa6?utm_source=community&utm_medium=PDgooglesheet&utm_term=defaultsheet" target="_blank" rel="noopener">Assign or Modify</a></td>
+<td></td>
+</tr>
+</table></div>
+            <h3 class="subsection-head">Top Collections</h3>
+            <div class="table-wrap"><table class="qz-table">
+<tr>
+<th>Collection of Top Activities</th>
+<th>For those who want to share on X/Twitter</th>
+<th>Directions for using this amazing sheet</th>
+</tr>
+<tr>
+<td>Elementary 🍎</td>
+<td></td>
+<td>Step 1: Open any of the links to the left 👈</td>
+</tr>
+<tr>
+<td><a href="https://docs.google.com/spreadsheets/d/1K14qfplePzwSIyIFzxl8qpQBqhFvXXJ9aIO9YHwalGg/edit?gid=0" target="_blank" rel="noopener">Most popular </a><a href="https://docs.google.com/spreadsheets/d/1K14qfplePzwSIyIFzxl8qpQBqhFvXXJ9aIO9YHwalGg/edit?gid=0" target="_blank" rel="noopener">Elem activities</a><a href="https://docs.google.com/spreadsheets/d/1K14qfplePzwSIyIFzxl8qpQBqhFvXXJ9aIO9YHwalGg/edit?gid=0" target="_blank" rel="noopener"> sorted by subject</a></td>
+<td><a href="https://ctt.ec/6eq9F" target="_blank" rel="noopener">Tweet</a></td>
+<td>Step 2: Copy the link to that sheet and email it to your teacher friends who would appreciate quality premade free resources for their subject 😎</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>Step 3: Smile big, because you probably just helped them out a ton! 😀</td>
+</tr>
+<tr>
+<td>Math 📊</td>
+<td></td>
+<td>Step 4: Repeat 🔁</td>
+</tr>
+<tr>
+<td><a href="https://docs.google.com/spreadsheets/d/1Mq94t_qplWac3qj4YVmzc0Pnbco11AZjWUFTc1Mb7as/edit?gid=515947254" target="_blank" rel="noopener">Most popular </a><a href="https://docs.google.com/spreadsheets/d/1Mq94t_qplWac3qj4YVmzc0Pnbco11AZjWUFTc1Mb7as/edit?gid=515947254" target="_blank" rel="noopener">Math activities</a><a href="https://docs.google.com/spreadsheets/d/1Mq94t_qplWac3qj4YVmzc0Pnbco11AZjWUFTc1Mb7as/edit?gid=515947254" target="_blank" rel="noopener"> sorted by subject</a></td>
+<td><a href="https://ctt.ec/G8319" target="_blank" rel="noopener">Tweet</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.google.com/spreadsheets/d/1jDZc1Z2t6J_Y62jNcj2awTABolh4NhpyJLyoVpRg8UM/edit?gid=0" target="_blank" rel="noopener">Premade activties using </a><a href="https://docs.google.com/spreadsheets/d/1jDZc1Z2t6J_Y62jNcj2awTABolh4NhpyJLyoVpRg8UM/edit?gid=0" target="_blank" rel="noopener">Desmos</a><a href="https://docs.google.com/spreadsheets/d/1jDZc1Z2t6J_Y62jNcj2awTABolh4NhpyJLyoVpRg8UM/edit?gid=0" target="_blank" rel="noopener"> graphs</a></td>
+<td><a href="https://ctt.ec/a1UfV" target="_blank" rel="noopener">Tweet</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.google.com/spreadsheets/d/1QN4Rqw2ekMiuQZqxOvcCmZPGMY8WpB6bAkaJ5Pg5TR4/edit?gid=2015939036" target="_blank" rel="noopener">CCSS Aligned Middle School Math Activities</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.google.com/spreadsheets/d/1Q6zA_tkCg3sF_bDVaelEGvn7QIY_2Nte3-RKyoHtxCs/edit?gid=225432814" target="_blank" rel="noopener">Top </a><a href="https://docs.google.com/spreadsheets/d/1Q6zA_tkCg3sF_bDVaelEGvn7QIY_2Nte3-RKyoHtxCs/edit?gid=225432814" target="_blank" rel="noopener">Math PhET</a><a href="https://docs.google.com/spreadsheets/d/1Q6zA_tkCg3sF_bDVaelEGvn7QIY_2Nte3-RKyoHtxCs/edit?gid=225432814" target="_blank" rel="noopener"> Simulations</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.google.com/spreadsheets/d/1n-lX7_f17uXiIeTzXxnYt7jHVv4YzIstAmgJOW9hPx0/edit?gid=1664932347" target="_blank" rel="noopener">Top Math </a><a href="https://docs.google.com/spreadsheets/d/1n-lX7_f17uXiIeTzXxnYt7jHVv4YzIstAmgJOW9hPx0/edit?gid=1664932347" target="_blank" rel="noopener">flashcards</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Science 🧪</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.google.com/spreadsheets/d/1hzAe0AD5gkpsREDTJRTv7ArHcJeT4uwPoV59CNQJ3PY/edit?gid=68962537" target="_blank" rel="noopener">Most popular </a><a href="https://docs.google.com/spreadsheets/d/1hzAe0AD5gkpsREDTJRTv7ArHcJeT4uwPoV59CNQJ3PY/edit?gid=68962537" target="_blank" rel="noopener">Science activities</a><a href="https://docs.google.com/spreadsheets/d/1hzAe0AD5gkpsREDTJRTv7ArHcJeT4uwPoV59CNQJ3PY/edit?gid=68962537" target="_blank" rel="noopener"> sorted by subject</a></td>
+<td><a href="https://ctt.ec/8pUVk" target="_blank" rel="noopener">Tweet</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.google.com/spreadsheets/d/1rTu5LxQN9x8yLF__LOx6zc3J8zusobvEVhE8GSxC9-o/edit?gid=0" target="_blank" rel="noopener">PhET simulations</a></td>
+<td><a href="https://ctt.ec/_4f5u" target="_blank" rel="noopener">Tweet</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.google.com/spreadsheets/d/1I0F3F6n8SYrPHiD0fdSRSVCdXPlX9mtq-FbjFDBtJ2E/edit?gid=936745818" target="_blank" rel="noopener">AP Biology, </a><a href="https://docs.google.com/spreadsheets/d/1I0F3F6n8SYrPHiD0fdSRSVCdXPlX9mtq-FbjFDBtJ2E/edit?gid=936745818" target="_blank" rel="noopener">AP Chem &amp; AP Physics</a><a href="https://docs.google.com/spreadsheets/d/1I0F3F6n8SYrPHiD0fdSRSVCdXPlX9mtq-FbjFDBtJ2E/edit?gid=936745818" target="_blank" rel="noopener"> activities</a></td>
+<td><a href="https://ctt.ec/Trc89" target="_blank" rel="noopener">Tweet</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.google.com/spreadsheets/d/19zeyMfXAsWsiaDVSHGRLw9FH6tQblYe9VvuUOP6V85k/edit?gid=427010561" target="_blank" rel="noopener">Amoeba Sisters and more top </a><a href="https://docs.google.com/spreadsheets/d/19zeyMfXAsWsiaDVSHGRLw9FH6tQblYe9VvuUOP6V85k/edit?gid=427010561" target="_blank" rel="noopener">YouTube channels</a></td>
+<td><a href="https://ctt.ec/_4f5u" target="_blank" rel="noopener">Tweet</a></td>
+<td></td>
+</tr>
+<tr>
+<td>ELA ✏️</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.google.com/spreadsheets/d/1OoGq_m8MO5Ci6vWV649iRipY0eVk-8ciYRFnf3CJnz0/edit?gid=2004274225" target="_blank" rel="noopener">Most popular </a><a href="https://docs.google.com/spreadsheets/d/1OoGq_m8MO5Ci6vWV649iRipY0eVk-8ciYRFnf3CJnz0/edit?gid=2004274225" target="_blank" rel="noopener">ELA activities</a><a href="https://docs.google.com/spreadsheets/d/1OoGq_m8MO5Ci6vWV649iRipY0eVk-8ciYRFnf3CJnz0/edit?gid=2004274225" target="_blank" rel="noopener"> sorted by subject</a></td>
+<td><a href="https://ctt.ec/U81Na" target="_blank" rel="noopener">Tweet</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.google.com/spreadsheets/d/1uoO121aqbZc_tvr5XLBB9zEOGaB95_2hayjRjZmMX6o/edit?gid=0" target="_blank" rel="noopener">Activities for </a><a href="https://docs.google.com/spreadsheets/d/1uoO121aqbZc_tvr5XLBB9zEOGaB95_2hayjRjZmMX6o/edit?gid=0" target="_blank" rel="noopener">novels</a><a href="https://docs.google.com/spreadsheets/d/1uoO121aqbZc_tvr5XLBB9zEOGaB95_2hayjRjZmMX6o/edit?gid=0" target="_blank" rel="noopener"> and other literary works on Quizizz</a></td>
+<td><a href="https://ctt.ec/29UY6" target="_blank" rel="noopener">Tweet</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.google.com/spreadsheets/d/1_rj8sivvb2P2ZN_MUa3XzQAT94WLKT007lA0GxdIXVQ/edit?gid=2116337019" target="_blank" rel="noopener">AP Language prep activities</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.google.com/spreadsheets/d/1lYGniQbVxI52sZk6-0a_WU0OwjNhJkVj2HYZd7jsuAU/edit?gid=1664932347" target="_blank" rel="noopener">Top ELA </a><a href="https://docs.google.com/spreadsheets/d/1lYGniQbVxI52sZk6-0a_WU0OwjNhJkVj2HYZd7jsuAU/edit?gid=1664932347" target="_blank" rel="noopener">flashcards</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Social Studies/History 🌍</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.google.com/spreadsheets/d/1ShlIV2rpmjLYJ3peROf_1XoHJlDjOrRk5YSQj1RLIxI/edit?gid=0" target="_blank" rel="noopener">Most popular </a><a href="https://docs.google.com/spreadsheets/d/1ShlIV2rpmjLYJ3peROf_1XoHJlDjOrRk5YSQj1RLIxI/edit?gid=0" target="_blank" rel="noopener">SS activities</a><a href="https://docs.google.com/spreadsheets/d/1ShlIV2rpmjLYJ3peROf_1XoHJlDjOrRk5YSQj1RLIxI/edit?gid=0" target="_blank" rel="noopener"> sorted by subject</a></td>
+<td><a href="https://ctt.ec/9707C" target="_blank" rel="noopener">Tweet</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.google.com/spreadsheets/d/1bOwCbHcIDUFzUM3Dk19IBV_jzT9mRU4zIkxQNvM9B-M/edit?gid=1664932347" target="_blank" rel="noopener">Top Social Studies </a><a href="https://docs.google.com/spreadsheets/d/1bOwCbHcIDUFzUM3Dk19IBV_jzT9mRU4zIkxQNvM9B-M/edit?gid=1664932347" target="_blank" rel="noopener">flashcards</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>World Language 🗣️</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.google.com/spreadsheets/d/1WqSq0JplNArR-xvJb0cpOZg2htrTKH0j6uk8LQvBv30/edit?gid=1411340537" target="_blank" rel="noopener">Most popular </a><a href="https://docs.google.com/spreadsheets/d/1WqSq0JplNArR-xvJb0cpOZg2htrTKH0j6uk8LQvBv30/edit?gid=1411340537" target="_blank" rel="noopener">Spanish activities</a><a href="https://docs.google.com/spreadsheets/d/1WqSq0JplNArR-xvJb0cpOZg2htrTKH0j6uk8LQvBv30/edit?gid=1411340537" target="_blank" rel="noopener"> sorted by subject</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.google.com/spreadsheets/d/1GjYCc135woxK-qVQJju3gy7A36eJf1cjKzIEWoBQ0oU/edit?gid=1057809770" target="_blank" rel="noopener">Most popular </a><a href="https://docs.google.com/spreadsheets/d/1GjYCc135woxK-qVQJju3gy7A36eJf1cjKzIEWoBQ0oU/edit?gid=1057809770" target="_blank" rel="noopener">French activities</a><a href="https://docs.google.com/spreadsheets/d/1GjYCc135woxK-qVQJju3gy7A36eJf1cjKzIEWoBQ0oU/edit?gid=1057809770" target="_blank" rel="noopener"> sorted by subject</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Health and Physical Education 🤾‍♂️</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.google.com/spreadsheets/d/1VKggOyeV_QAbTAaYsUK7r_7vdJQuNysOqvTElBX73FA/edit?gid=1067526078" target="_blank" rel="noopener">Most popular </a><a href="https://docs.google.com/spreadsheets/d/1VKggOyeV_QAbTAaYsUK7r_7vdJQuNysOqvTElBX73FA/edit?gid=1067526078" target="_blank" rel="noopener">Health &amp; PE activities</a><a href="https://docs.google.com/spreadsheets/d/1VKggOyeV_QAbTAaYsUK7r_7vdJQuNysOqvTElBX73FA/edit?gid=1067526078" target="_blank" rel="noopener"> sorted by subject</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>State Testing ⭐️</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.google.com/spreadsheets/d/1rcMLGvvr7VeM8F2E183UiblCwudbjeXIy7zl3iKnr-I/edit?gid=0" target="_blank" rel="noopener">STAAR Prep</a></td>
+<td><a href="https://ctt.ec/Y76lz" target="_blank" rel="noopener">Tweet</a></td>
+<td></td>
+</tr>
+<tr>
+<td>Professional Development for Educators</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.google.com/spreadsheets/d/18GtutWr8iO156-yEZIdf2B2ZA2RUysN8WX9JIryk3LE/edit?gid=1412830515" target="_blank" rel="noopener">Click and Go PD on the most popular PD topics</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://docs.google.com/spreadsheets/d/18GtutWr8iO156-yEZIdf2B2ZA2RUysN8WX9JIryk3LE/edit?gid=1412830515" target="_blank" rel="noopener">Click and Go PD on the most popular PD topics</a></td>
+<td></td>
+<td></td>
+</tr>
+</table></div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <p>Maintained since 2017 for all 58 NC community colleges &middot; <a href="https://www.nc3adl.org/" target="_blank" rel="noopener">NC3ADL Official Site</a></p>
+        <p style="margin-top:8px;">Angela Westmoreland, M.Ed. &middot; VP, NC3ADL &middot; Fayetteville Technical Community College &middot; <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a></p>
+    </footer>
+
+    <script>
+        const btns = document.querySelectorAll('.tab-btn');
+        const sections = document.querySelectorAll('.tab-section');
+        btns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const tab = btn.dataset.tab;
+                btns.forEach(b => b.classList.remove('active'));
+                sections.forEach(s => s.classList.remove('active'));
+                btn.classList.add('active');
+                const target = document.getElementById('tab-' + tab);
+                if (target) target.classList.add('active');
+            });
+        });
+    </script>
 
 </body>
 </html>
